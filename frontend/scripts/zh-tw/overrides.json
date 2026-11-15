@@ -147,6 +147,10 @@
 		"en": "Could not remove the Coder configuration.",
 		"zhTW": "無法移除 Coder 設定。"
 	},
+	"settings.cloudProject.intakeDescription": {
+		"en": "Auto-spawn worker sessions from matching issues opened by the repository's owners, members and collaborators. Issues from anyone else are skipped. These sessions don't get the project's environment variables.",
+		"zhTW": "從儲存庫所有者、成員和協作者建立的符合議題自動建立工人工作階段。其他人的議題會被跳過。這些工作階段不會獲得專案的環境變數。"
+	},
 	"settings.cloudProject.workingDirectoryPlaceholder": {
 		"en": "~/work/{repo}",
 		"zhTW": "~/work/{repo}"
@@ -763,6 +767,22 @@
 		"en": "Português (Brasil)",
 		"zhTW": "Português (Brasil)"
 	},
+	"settings.models.orchestratorMode": {
+		"en": "Orchestrator mode",
+		"zhTW": "指揮官模式"
+	},
+	"settings.models.orchestratorModel": {
+		"en": "Orchestrator model",
+		"zhTW": "指揮官模型"
+	},
+	"settings.models.workerMode": {
+		"en": "Worker mode",
+		"zhTW": "工人模式"
+	},
+	"settings.models.workerModel": {
+		"en": "Worker model",
+		"zhTW": "工人模型"
+	},
 	"settings.project.coAuthorCommitsDescription": {
 		"en": "When enabled, commits the agents make in this project list the Orchestrator GitHub App as a co-author. The commit author does not change.",
 		"zhTW": "啟用後，代理在此專案中建立的提交會將 Orchestrator GitHub App 列為共同作者。提交作者不會改變。"
@@ -775,9 +795,41 @@
 		"en": "This Cloud control plane does not support the co-author setting yet, so it stays on.",
 		"zhTW": "此 Cloud 控制平面尚不支援共同作者設定，因此會維持開啟。"
 	},
+	"settings.project.agentsRequired": {
+		"en": "Worker and orchestrator agents are required.",
+		"zhTW": "工人與指揮官為必填項。"
+	},
+	"settings.project.defaultOrchestrator": {
+		"en": "Orchestrator agent",
+		"zhTW": "指揮官"
+	},
+	"settings.project.defaultReviewer": {
+		"en": "Reviewer agent",
+		"zhTW": "審查者"
+	},
+	"settings.project.defaultWorker": {
+		"en": "Worker agent",
+		"zhTW": "工人"
+	},
+	"settings.project.intakeAssigneeHint": {
+		"en": "Only issues assigned to this GitHub or GitLab user (or * for any assignee) can auto-start worker sessions. Intake stays off in Orchestrator until you save an assignee.",
+		"zhTW": "只有分配給此 GitHub 或 GitLab 使用者的問題（或使用 * 表示任意負責人）才能自動啟動工人工作階段。在儲存負責人之前，Orchestrator 中的問題接收功能將保持關閉。"
+	},
 	"settings.project.coderTitle": {
 		"en": "Coder",
 		"zhTW": "Coder"
+	},
+	"settings.project.approval": {
+		"en": "Approval",
+		"zhTW": "核准"
+	},
+	"settings.project.replaceOrchestratorFailed": {
+		"en": "Could not replace orchestrator",
+		"zhTW": "無法替換指揮官"
+	},
+	"settings.project.restartFailed": {
+		"en": "Orchestrator restart failed: {{error}}",
+		"zhTW": "指揮官重新啟動失敗：{{error}}"
 	},
 	"settings.project.autoReview": {
 		"en": "Auto review",
@@ -789,15 +841,15 @@
 	},
 	"settings.project.workersRequestReviewDescription": {
 		"en": "When enabled, new workers start an Orchestrator review of their own PR once it is ready, and again after each fix. When disabled, workers ask before starting one.",
-		"zhTW": "啟用後，新的工作者會在自己的 PR 準備就緒時啟動 Orchestrator 審查，並在每次修正後再審查一次。停用時，工作者會先詢問再啟動審查。"
+		"zhTW": "啟用後，新的工人會在自己的 PR 準備就緒時啟動 Orchestrator 審查，並在每次修正後再審查一次。停用時，工人會先詢問再啟動審查。"
 	},
 	"settings.project.workersRequestReviewToggle": {
 		"en": "Workers request a built-in review",
-		"zhTW": "工作者要求內建審查"
+		"zhTW": "工人要求內建審查"
 	},
 	"settings.project.autoReviewDescription": {
 		"en": "When enabled, new worker sessions will automatically review their pull requests. This can still be toggled per session after spawn.",
-		"zhTW": "啟用後，新的工作者工作階段會自動審查自己的提取要求。建立後仍可在每個工作階段中個別切換。"
+		"zhTW": "啟用後，新的工人工作階段會自動審查自己的提取要求。建立後仍可在每個工作階段中個別切換。"
 	},
 	"settings.project.scripts": {
 		"en": "Scripts",
@@ -895,6 +947,10 @@
 		"en": "Cleaned {{cleaned}}; skipped {{skipped}}.",
 		"zhTW": "已清理 {{cleaned}} 個；略過 {{skipped}} 個。"
 	},
+	"settings.project.cloudVarKind": {
+		"en": "orchestrator or worker",
+		"zhTW": "指揮官或工人"
+	},
 	"settings.project.environment": {
 		"en": "Environment",
 		"zhTW": "環境"
@@ -974,6 +1030,14 @@
 	"settings.project.removeVariable": {
 		"en": "Remove {{name}} variable",
 		"zhTW": "移除 {{name}} 變數"
+	},
+	"settings.project.selectOrchestrator": {
+		"en": "Select orchestrator agent",
+		"zhTW": "選擇指揮官"
+	},
+	"settings.project.selectWorker": {
+		"en": "Select worker agent",
+		"zhTW": "選擇工人"
 	},
 	"settings.updates.bytes": {
 		"en": "{{downloaded}} / {{total}} MB",
@@ -1066,6 +1130,18 @@
 	"terminal.agentExitedHelp": {
 		"en": "The agent stopped; the session and any surviving preview remain available. Resume the agent to continue.",
 		"zhTW": "代理已停止；工作階段及仍存在的預覽依然可用。恢復代理即可繼續。"
+	},
+	"settings.project.intakeDescription": {
+		"en": "Auto-spawn worker sessions from matching tracker issues.",
+		"zhTW": "從符合的追蹤器議題自動建立工人工作階段。"
+	},
+	"settings.project.intakeTooltip": {
+		"en": "Auto-spawns a worker session for each matching tracker issue.",
+		"zhTW": "為每個符合的議題自動建立一個工人工作階段。"
+	},
+	"settings.migration.description": {
+		"en": "Import projects and orchestrator sessions from an earlier Orchestrator install. Your old files are never modified, and this is safe to run more than once.",
+		"zhTW": "從舊版 Orchestrator 安裝中匯入專案和指揮官工作階段。舊檔案絕不會被修改，並且可以安全地重複執行。"
 	},
 	"files.closeAllTabs": {
 		"en": "Close all files",
@@ -1285,7 +1361,19 @@
 	},
 	"settings.models.workerRole": {
 		"en": "Worker",
-		"zhTW": "工作者"
+		"zhTW": "工人"
+	},
+	"settings.models.orchestratorRole": {
+		"en": "Orchestrator agent",
+		"zhTW": "指揮官"
+	},
+	"settings.project.reviewerAgent": {
+		"en": "Reviewer agent",
+		"zhTW": "審查者"
+	},
+	"settings.project.roleApproval": {
+		"en": "{{role}} approval",
+		"zhTW": "{{role}}核准"
 	},
 	"chat.artifact.label": {
 		"en": "Artifact",
@@ -1971,9 +2059,17 @@
 		"en": "Add to chat",
 		"zhTW": "加入聊天"
 	},
+	"settings.billing.freeOrchestrator": {
+		"en": "Orchestrator agent, workers and PR reviews",
+		"zhTW": "指揮官、工人和 PR 審查"
+	},
 	"settings.billing.planEnterprise": {
 		"en": "Enterprise",
 		"zhTW": "企業版"
+	},
+	"settings.billing.runningDetail": {
+		"en": "Orchestrator {{orchestrators}}/{{orchestratorSlots}} · Workers {{workers}}/{{workerSlots}}",
+		"zhTW": "指揮官 {{orchestrators}}/{{orchestratorSlots}} · 工人 {{workers}}/{{workerSlots}}"
 	},
 	"files.readOnlySnapshot": {
 		"en": "This revision is read-only. Open the workspace copy to edit.",
@@ -2086,6 +2182,22 @@
 	"teams.field.teamMembersAll": {
 		"en": "{{people}} · {{names}}",
 		"zhTW": "{{people}} · {{names}}"
+	},
+	"settings.cloudProject.workerInstructions": {
+		"en": "Worker instructions",
+		"zhTW": "工人指令"
+	},
+	"settings.cloudProject.workerInstructionsHint": {
+		"en": "Added to every worker's prompt.",
+		"zhTW": "新增到每個工人的提示詞中。"
+	},
+	"settings.cloudProject.orchestratorInstructions": {
+		"en": "Orchestrator instructions",
+		"zhTW": "指揮官指令"
+	},
+	"settings.cloudProject.orchestratorInstructionsHint": {
+		"en": "Added to the orchestrator's prompt.",
+		"zhTW": "新增到指揮官的提示詞中。"
 	},
 	"coder.repos.urlPlaceholder": {
 		"en": "https://github.com/owner/repo",
