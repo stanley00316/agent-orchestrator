@@ -2123,6 +2123,7 @@
 	"settings.language.ru": "Русский",
 	"settings.language.saveFailed": "Не удалось сохранить настройку языка.",
 	"settings.language.zhCN": "简体中文",
+	"settings.language.zhTW": "繁體中文",
 	"settings.models.autoRouteLabel": "Авто",
 	"settings.models.browse": "Обзор",
 	"settings.models.custom": "Введите ID модели…",

@@ -12,11 +12,13 @@ import {
 	ptBRMessages,
 	ruMessages,
 	zhCNMessages,
+	zhTWMessages,
 } from "./all-messages";
 
 const allCatalogs = {
 	en: enMessages,
 	"zh-CN": zhCNMessages,
+	"zh-TW": zhTWMessages,
 	ja: jaMessages,
 	ko: koMessages,
 	es: esMessages,
@@ -76,10 +78,19 @@ describe("app i18next instance", () => {
 		expect(createAppI18n("zh-CN").t("settings.language.zhCN")).toBe("简体中文");
 	});
 
+	it("uses Traditional Chinese with Taiwan wording when zh-TW is selected", () => {
+		const traditional = createAppI18n("zh-TW");
+		expect(traditional.t("settings.general")).toBe("一般");
+		expect(traditional.t("settings.language.zhTW")).toBe("繁體中文");
+		expect(traditional.t("quitConfirm.quit")).toBe("結束");
+		expect(traditional.t("tray.untitledSession")).toBe("未命名工作階段");
+	});
+
 	it("resolves native language labels for every supported locale", () => {
 		const labels = {
 			en: "settings.language.en",
 			"zh-CN": "settings.language.zhCN",
+			"zh-TW": "settings.language.zhTW",
 			ja: "settings.language.ja",
 			ko: "settings.language.ko",
 			es: "settings.language.es",
@@ -91,6 +102,7 @@ describe("app i18next instance", () => {
 		const expected = {
 			en: "English",
 			"zh-CN": "简体中文",
+			"zh-TW": "繁體中文",
 			ja: "日本語",
 			ko: "한국어",
 			es: "Español",

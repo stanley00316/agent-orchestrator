@@ -1,0 +1,2094 @@
+{
+	"chat.annotationReferences": {
+		"en": "Referenced chat annotations",
+		"zhTW": "引用的聊天標註"
+	},
+	"chat.removeAllAnnotations": {
+		"en": "Remove all annotations",
+		"zhTW": "移除所有標註"
+	},
+	"chat.removeAnnotation": {
+		"en": "Remove annotation {{count}}",
+		"zhTW": "移除標註 {{count}}"
+	},
+	"settings.coder.navLabel": {
+		"en": "Coder",
+		"zhTW": "Coder"
+	},
+	"settings.coder.templatesListLabel": {
+		"en": "Templates on your Coder",
+		"zhTW": "你的 Coder 上的範本"
+	},
+	"settings.coder.templatesListHint": {
+		"en": "The workspace templates available on your connected Coder deployment.",
+		"zhTW": "已連線的 Coder 部署中可用的工作區範本。"
+	},
+	"settings.coder.templateDocs": {
+		"en": "Open template docs in Coder",
+		"zhTW": "在 Coder 中開啟範本說明文件"
+	},
+	"settings.coder.templatesRefresh": {
+		"en": "Refresh templates",
+		"zhTW": "重新整理範本"
+	},
+	"settings.coder.templateCreate": {
+		"en": "New template in Coder",
+		"zhTW": "在 Coder 中新增範本"
+	},
+	"settings.coder.templatesLoading": {
+		"en": "Loading templates…",
+		"zhTW": "正在載入範本…"
+	},
+	"settings.coder.templatesEmpty": {
+		"en": "No templates found on this Coder deployment.",
+		"zhTW": "此 Coder 部署中找不到任何範本。"
+	},
+	"settings.coder.templatesError": {
+		"en": "Couldn't load templates. Check the URL and API token are correct.",
+		"zhTW": "無法載入範本。請確認網址和 API 權杖是否正確。"
+	},
+	"settings.coder.title": {
+		"en": "Coder configuration",
+		"zhTW": "Coder 設定"
+	},
+	"settings.coder.description": {
+		"en": "Connect your organization's own Coder deployment. Orchestrator Cloud uses it to create and drive the sandboxes your cloud sessions run in.",
+		"zhTW": "連線你組織自己的 Coder 部署。Orchestrator Cloud 會用它來建立並操控雲端工作階段所執行的沙盒。"
+	},
+	"settings.coder.signIn": {
+		"en": "Sign in to Orchestrator Cloud (left sidebar) to configure your Coder connection.",
+		"zhTW": "請登入 Orchestrator Cloud（左側邊欄）以設定 Coder 連線。"
+	},
+	"settings.coder.urlLabel": {
+		"en": "Coder URL or IP *",
+		"zhTW": "Coder 網址或 IP *"
+	},
+	"settings.coder.urlHint": {
+		"en": "The base URL of your Coder deployment. http, https, or a raw IP address are all accepted.",
+		"zhTW": "你的 Coder 部署的基本網址。可使用 http、https 或直接輸入 IP 位址。"
+	},
+	"settings.coder.urlPlaceholder": {
+		"en": "https://coder.example.com",
+		"zhTW": "https://coder.example.com"
+	},
+	"settings.coder.tokenLabel": {
+		"en": "API token *",
+		"zhTW": "API 權杖 *"
+	},
+	"settings.coder.tokenHint": {
+		"en": "A Coder API token with permission to create workspaces. It is encrypted and never shown again.",
+		"zhTW": "具備建立工作區權限的 Coder API 權杖。權杖會加密儲存，且不會再次顯示。"
+	},
+	"settings.coder.tokenPlaceholder": {
+		"en": "Paste your Coder API token",
+		"zhTW": "貼上你的 Coder API 權杖"
+	},
+	"settings.coder.tokenStored": {
+		"en": "A token is saved. Enter a new one to replace it.",
+		"zhTW": "已儲存一個權杖。輸入新權杖即可取代。"
+	},
+	"settings.coder.tokenHowToTitle": {
+		"en": "Need a token?",
+		"zhTW": "需要權杖嗎？"
+	},
+	"settings.coder.tokenStep1": {
+		"en": "Use the button to open your Coder token page. If you are not signed in to Coder, you will be asked to log in first, then land on the token page.",
+		"zhTW": "使用按鈕開啟你的 Coder 權杖頁面。如果尚未登入 Coder，會先要求你登入，接著進入權杖頁面。"
+	},
+	"settings.coder.tokenStep2": {
+		"en": "Give the token a name (for example \"Orchestrator\"), set a lifetime, and create it.",
+		"zhTW": "為權杖命名（例如「Orchestrator」）、設定有效期限，然後建立。"
+	},
+	"settings.coder.tokenStep3": {
+		"en": "Copy the token, paste it in the field above, then Save and fetch templates.",
+		"zhTW": "複製權杖並貼到上方欄位，然後按「儲存並取得範本」。"
+	},
+	"settings.coder.tokenCreate": {
+		"en": "Create a token in Coder",
+		"zhTW": "在 Coder 中建立權杖"
+	},
+	"settings.coder.tokenCreateNeedsUrl": {
+		"en": "Enter your Coder URL above first.",
+		"zhTW": "請先在上方輸入你的 Coder 網址。"
+	},
+	"settings.coder.save": {
+		"en": "Save and fetch templates",
+		"zhTW": "儲存並取得範本"
+	},
+	"settings.coder.saving": {
+		"en": "Saving…",
+		"zhTW": "正在儲存…"
+	},
+	"settings.coder.saved": {
+		"en": "Saved",
+		"zhTW": "已儲存"
+	},
+	"settings.coder.errorSave": {
+		"en": "Could not save the Coder configuration.",
+		"zhTW": "無法儲存 Coder 設定。"
+	},
+	"settings.coder.remove": {
+		"en": "Remove",
+		"zhTW": "移除"
+	},
+	"settings.coder.removeConfirm": {
+		"en": "Confirm remove",
+		"zhTW": "確認移除"
+	},
+	"settings.coder.removeCancel": {
+		"en": "Cancel",
+		"zhTW": "取消"
+	},
+	"settings.coder.removing": {
+		"en": "Removing…",
+		"zhTW": "正在移除…"
+	},
+	"settings.coder.errorRemove": {
+		"en": "Could not remove the Coder configuration.",
+		"zhTW": "無法移除 Coder 設定。"
+	},
+	"settings.cloudProject.workingDirectoryPlaceholder": {
+		"en": "~/work/{repo}",
+		"zhTW": "~/work/{repo}"
+	},
+	"settings.cloudProject.workingDirectoryPlaceholderStandalone": {
+		"en": "~/work/scratch",
+		"zhTW": "~/work/scratch"
+	},
+	"browser.sessionEnded": {
+		"en": "Session ended — browser preview unavailable.",
+		"zhTW": "工作階段已結束 — 無法使用瀏覽器預覽。"
+	},
+	"command.group.files": {
+		"en": "Files",
+		"zhTW": "檔案"
+	},
+	"command.reviewPr": {
+		"en": "{{action}} #{{number}}",
+		"zhTW": "{{action}} #{{number}}"
+	},
+	"command.searchFiles": {
+		"en": "Search files",
+		"zhTW": "搜尋檔案"
+	},
+	"command.chooseFileSession": {
+		"en": "Choose a session",
+		"zhTW": "選擇工作階段"
+	},
+	"command.searchFilesPlaceholder": {
+		"en": "Search files in {{session}}",
+		"zhTW": "在 {{session}} 中搜尋檔案"
+	},
+	"command.searchFilesLoading": {
+		"en": "Searching files…",
+		"zhTW": "正在搜尋檔案…"
+	},
+	"command.searchFilesEmpty": {
+		"en": "No matching files.",
+		"zhTW": "沒有符合的檔案。"
+	},
+	"command.searchFilesError": {
+		"en": "Unable to search files.",
+		"zhTW": "無法搜尋檔案。"
+	},
+	"command.searchFilesHint": {
+		"en": "Type at least 2 characters to search files.",
+		"zhTW": "請輸入至少 2 個字元來搜尋檔案。"
+	},
+	"command.searchFilesTruncated": {
+		"en": "Some workspace files were not searched.",
+		"zhTW": "部分工作區檔案未被搜尋。"
+	},
+	"createProject.sandboxProvider.docker": {
+		"en": "Docker",
+		"zhTW": "Docker"
+	},
+	"createProject.sandboxProvider.nodeops": {
+		"en": "NodeOps",
+		"zhTW": "NodeOps"
+	},
+	"createProject.sandboxProvider.ecs": {
+		"en": "ECS",
+		"zhTW": "ECS"
+	},
+	"createProject.sandboxProvider.daytona": {
+		"en": "Daytona",
+		"zhTW": "Daytona"
+	},
+	"createProject.cloneRepositoryUrlPlaceholder": {
+		"en": "https://github.com/org/repository.git",
+		"zhTW": "https://github.com/org/repository.git"
+	},
+	"createProject.createGithubRepoDescription": {
+		"en": "`{{name}}` does not have a GitHub remote. Orchestrator will create a private GitHub repo, add it as `origin`, and push the current branch.",
+		"zhTW": "`{{name}}` 沒有 GitHub 遠端。Orchestrator 會建立一個私人 GitHub 儲存庫，將其新增為 `origin`，並推送目前的分支。"
+	},
+	"createProject.createGithubRepoWithInitDescription": {
+		"en": "`{{name}}` does not have a GitHub remote. Orchestrator will run `git init`, create a private GitHub repo, add it as `origin`, and push the current branch.",
+		"zhTW": "`{{name}}` 沒有 GitHub 遠端。Orchestrator 會執行 `git init`、建立一個私人 GitHub 儲存庫、將其新增為 `origin`，並推送目前的分支。"
+	},
+	"createProject.createPrivateGithubRepo": {
+		"en": "Create a private GitHub repo?",
+		"zhTW": "要建立私人 GitHub 儲存庫嗎？"
+	},
+	"createProject.githubOwner": {
+		"en": "Owner",
+		"zhTW": "擁有者"
+	},
+	"createProject.githubRepositoryName": {
+		"en": "Repository name",
+		"zhTW": "儲存庫名稱"
+	},
+	"createProject.githubRepoAvailable": {
+		"en": "Repository name is available.",
+		"zhTW": "此儲存庫名稱可以使用。"
+	},
+	"createProject.githubRepoChecking": {
+		"en": "Checking repository name...",
+		"zhTW": "正在檢查儲存庫名稱..."
+	},
+	"createProject.githubRepoReady": {
+		"en": "Repository name will be checked before Orchestrator creates it.",
+		"zhTW": "Orchestrator 建立儲存庫前會先檢查名稱。"
+	},
+	"createProject.githubRepoUnavailable": {
+		"en": "Repository name is not available.",
+		"zhTW": "此儲存庫名稱無法使用。"
+	},
+	"createProject.githubRepoWillCreate": {
+		"en": "Will create `{{repo}}`",
+		"zhTW": "將建立 `{{repo}}`"
+	},
+	"createProject.originRemoteUrlPlaceholder": {
+		"en": "https://github.com/org/repository.git",
+		"zhTW": "https://github.com/org/repository.git"
+	},
+	"cues.agentLabel": {
+		"en": "Agent instruction",
+		"zhTW": "代理指示"
+	},
+	"cues.backToCues": {
+		"en": "Back to all cues",
+		"zhTW": "返回所有 Cue"
+	},
+	"cues.cancel": {
+		"en": "Cancel",
+		"zhTW": "取消"
+	},
+	"cues.commandLabel": {
+		"en": "Command",
+		"zhTW": "指令"
+	},
+	"cues.commandPlaceholder": {
+		"en": "e.g. /status or npm test",
+		"zhTW": "例如 /status 或 npm test"
+	},
+	"cues.create": {
+		"en": "Create",
+		"zhTW": "建立"
+	},
+	"cues.delete": {
+		"en": "Delete",
+		"zhTW": "刪除"
+	},
+	"cues.deleteBody": {
+		"en": "{{name}} will be removed. This cannot be undone.",
+		"zhTW": "{{name}} 將被移除。此操作無法復原。"
+	},
+	"cues.deleteFailed": {
+		"en": "Could not delete the cue.",
+		"zhTW": "無法刪除此 Cue。"
+	},
+	"cues.deleteTitle": {
+		"en": "Delete this cue?",
+		"zhTW": "要刪除這個 Cue 嗎？"
+	},
+	"cues.edit": {
+		"en": "Edit",
+		"zhTW": "編輯"
+	},
+	"cues.empty": {
+		"en": "No cues set up yet",
+		"zhTW": "尚未設定任何 Cue"
+	},
+	"cues.emptyMenu": {
+		"en": "No cues in this project",
+		"zhTW": "此專案沒有 Cue"
+	},
+	"cues.invokeFailed": {
+		"en": "Could not run the cue.",
+		"zhTW": "無法執行此 Cue。"
+	},
+	"cues.loadFailed": {
+		"en": "Could not load cues.",
+		"zhTW": "無法載入 Cue。"
+	},
+	"cues.loading": {
+		"en": "Loading cues…",
+		"zhTW": "正在載入 Cue…"
+	},
+	"cues.nameLabel": {
+		"en": "Name",
+		"zhTW": "名稱"
+	},
+	"cues.namePlaceholder": {
+		"en": "Cue name",
+		"zhTW": "Cue 名稱"
+	},
+	"cues.nameRequired": {
+		"en": "A cue needs a name.",
+		"zhTW": "Cue 必須有名稱。"
+	},
+	"cues.newCue": {
+		"en": "New cue",
+		"zhTW": "新增 Cue"
+	},
+	"cues.promptPlaceholder": {
+		"en": "e.g. Summarize what changed since the last commit",
+		"zhTW": "例如：摘要自上次提交以來的變更"
+	},
+	"cues.retry": {
+		"en": "Try again",
+		"zhTW": "再試一次"
+	},
+	"cues.run": {
+		"en": "Run a cue",
+		"zhTW": "執行 Cue"
+	},
+	"cues.save": {
+		"en": "Save",
+		"zhTW": "儲存"
+	},
+	"cues.saveFailed": {
+		"en": "Could not save the cue.",
+		"zhTW": "無法儲存此 Cue。"
+	},
+	"cues.title": {
+		"en": "Cues",
+		"zhTW": "Cues"
+	},
+	"cues.typeLabel": {
+		"en": "Type",
+		"zhTW": "類型"
+	},
+	"cues.typeName.agent": {
+		"en": "Agent",
+		"zhTW": "代理"
+	},
+	"cues.typeName.command": {
+		"en": "Command",
+		"zhTW": "指令"
+	},
+	"inspector.ci.autoInject": {
+		"en": "Automatically fix CI failures",
+		"zhTW": "自動修正 CI 失敗"
+	},
+	"inspector.review.autoInject": {
+		"en": "Automatically fix review comments",
+		"zhTW": "自動修正審查留言"
+	},
+	"inspector.review.openReviewer": {
+		"en": "Open",
+		"zhTW": "開啟"
+	},
+	"inspector.review.requestedByAgent": {
+		"en": "Requested by agent",
+		"zhTW": "由代理要求"
+	},
+	"mobile.android": {
+		"en": "Android",
+		"zhTW": "Android"
+	},
+	"mobile.ios": {
+		"en": "iOS",
+		"zhTW": "iOS"
+	},
+	"mobile.tailscale": {
+		"en": "Tailscale",
+		"zhTW": "Tailscale"
+	},
+	"newTask.refreshModels": {
+		"en": "Refresh models",
+		"zhTW": "重新整理模型"
+	},
+	"newTask.refreshingModels": {
+		"en": "Refreshing models...",
+		"zhTW": "正在重新整理模型..."
+	},
+	"pr.card.reviewStatus": {
+		"en": "Review status",
+		"zhTW": "審查狀態"
+	},
+	"pr.tab.label": {
+		"en": "PR #{{number}}",
+		"zhTW": "PR #{{number}}"
+	},
+	"pr.others.short": {
+		"en": "#{{number}}",
+		"zhTW": "#{{number}}"
+	},
+	"pr.merge.checkingDetail": {
+		"en": "Waiting for the latest checks and review state.",
+		"zhTW": "正在等待最新的檢查結果與審查狀態。"
+	},
+	"pr.merge.checkingReadiness": {
+		"en": "Checking merge readiness",
+		"zhTW": "正在檢查是否可合併"
+	},
+	"pr.card.checksCancelled": {
+		"en": "Checks cancelled",
+		"zhTW": "檢查已取消"
+	},
+	"pr.merge.checksCancelledDetail": {
+		"en": "A check was cancelled and nothing replaced it. Re-run it to get a result.",
+		"zhTW": "有一項檢查已取消，且沒有其他檢查取代它。請重新執行以取得結果。"
+	},
+	"pr.card.checksUnavailable": {
+		"en": "Checks unavailable",
+		"zhTW": "無法取得檢查結果"
+	},
+	"pr.merge.checksUnavailableDetail": {
+		"en": "GitHub did not return complete CI status. Verify the GitHub App has Checks and Commit statuses read access.",
+		"zhTW": "GitHub 未回傳完整的 CI 狀態。請確認 GitHub App 具有 Checks 與 Commit statuses 的讀取權限。"
+	},
+	"pr.merge.accessLost": {
+		"en": "Status unavailable",
+		"zhTW": "無法取得狀態"
+	},
+	"pr.merge.accessLostDetail": {
+		"en": "GitHub access to this repository is unavailable, so merge readiness cannot be checked.",
+		"zhTW": "無法存取此儲存庫的 GitHub 資料，因此無法檢查是否可合併。"
+	},
+	"pr.merge.notMergeableYet": {
+		"en": "Not mergeable yet",
+		"zhTW": "尚無法合併"
+	},
+	"pr.merge.reasonConflict": {
+		"en": "One approval is sufficient, but the merge conflict still blocks this PR.",
+		"zhTW": "已有足夠的核准，但合併衝突仍阻擋此 PR。"
+	},
+	"pr.merge.reasonChecksFailing": {
+		"en": "The review requirement is satisfied, but failing checks still block this PR.",
+		"zhTW": "已符合審查要求，但失敗的檢查仍阻擋此 PR。"
+	},
+	"pr.merge.reasonReview": {
+		"en": "A required review must be completed before this PR can merge.",
+		"zhTW": "此 PR 需要先完成必要的審查才能合併。"
+	},
+	"pr.merge.reasonComments": {
+		"en": "Unresolved review comments must be resolved before this PR can merge.",
+		"zhTW": "此 PR 需要先解決未處理的審查留言才能合併。"
+	},
+	"pr.merge.reasonReady": {
+		"en": "No merge conflict, checks are passing, and the review requirement is satisfied.",
+		"zhTW": "沒有合併衝突、檢查均通過，且已符合審查要求。"
+	},
+	"pr.overflow": {
+		"en": "+{{n}} {{noun}}",
+		"zhTW": "+{{n}} {{noun}}"
+	},
+	"pr.review.requirementSatisfied": {
+		"en": "PR approved",
+		"zhTW": "PR 已核准"
+	},
+	"pr.review.viewDetails": {
+		"en": "View review details",
+		"zhTW": "檢視審查詳情"
+	},
+	"report.discord": {
+		"en": "Discord",
+		"zhTW": "Discord"
+	},
+	"report.github": {
+		"en": "GitHub",
+		"zhTW": "GitHub"
+	},
+	"settings.cliLink.label": {
+		"en": "Global ao command",
+		"zhTW": "全域 ao 指令"
+	},
+	"settings.cliLink.loading": {
+		"en": "Checking the global ao command.",
+		"zhTW": "正在檢查全域 ao 指令。"
+	},
+	"settings.cliLink.link": {
+		"en": "Link",
+		"zhTW": "連結"
+	},
+	"settings.cliLink.relink": {
+		"en": "Relink",
+		"zhTW": "重新連結"
+	},
+	"settings.cliLink.unlink": {
+		"en": "Unlink",
+		"zhTW": "取消連結"
+	},
+	"settings.cliLink.confirmLinkTitle": {
+		"en": "Link the global ao command?",
+		"zhTW": "要連結全域 ao 指令嗎？"
+	},
+	"settings.cliLink.confirmUnlinkTitle": {
+		"en": "Remove the global ao link?",
+		"zhTW": "要移除全域 ao 連結嗎？"
+	},
+	"settings.cliLink.currentMissing": {
+		"en": "Current target: none at {{path}}.",
+		"zhTW": "目前目標：{{path}} 不存在。"
+	},
+	"settings.cliLink.current": {
+		"en": "Current target: {{target}}.",
+		"zhTW": "目前目標：{{target}}。"
+	},
+	"settings.cliLink.proposed": {
+		"en": "Proposed target: {{target}} ({{version}}).",
+		"zhTW": "建議目標：{{target}}（{{version}}）。"
+	},
+	"settings.cliLink.proposedUnknown": {
+		"en": "Proposed target: {{target}}.",
+		"zhTW": "建議目標：{{target}}。"
+	},
+	"settings.cliLink.foreign": {
+		"en": "This command is not an Orchestrator link, so it was left unchanged.",
+		"zhTW": "此指令不是 Orchestrator 的連結，因此保持不變。"
+	},
+	"settings.terminalShell.gitBash": {
+		"en": "Git Bash",
+		"zhTW": "Git Bash"
+	},
+	"settings.terminalShell.pwsh": {
+		"en": "PowerShell",
+		"zhTW": "PowerShell"
+	},
+	"settings.terminalShell.windowsPowerShell": {
+		"en": "Windows PowerShell",
+		"zhTW": "Windows PowerShell"
+	},
+	"settings.terminalShell.customPathPlaceholder": {
+		"en": "C:\\path\\to\\shell.exe",
+		"zhTW": "C:\\path\\to\\shell.exe"
+	},
+	"settings.terminalShell.wsl": {
+		"en": "WSL",
+		"zhTW": "WSL"
+	},
+	"settings.terminalShell.customPathPlaceholderUnix": {
+		"en": "/path/to/shell",
+		"zhTW": "/path/to/shell"
+	},
+	"settings.computerUse.driver": {
+		"en": "Cua Driver",
+		"zhTW": "Cua 驅動程式"
+	},
+	"settings.harness": {
+		"en": "Harness",
+		"zhTW": "Harness"
+	},
+	"settings.harness.availableWith": {
+		"en": "Available via {{method}}",
+		"zhTW": "可透過 {{method}} 取得"
+	},
+	"settings.harness.authFailed": {
+		"en": "Authentication failed.",
+		"zhTW": "驗證失敗。"
+	},
+	"settings.harness.authClosing": {
+		"en": "Closing authentication terminal…",
+		"zhTW": "正在關閉驗證終端機…"
+	},
+	"settings.harness.authTimedOut": {
+		"en": "Authentication timed out. Retry to continue.",
+		"zhTW": "驗證逾時。請重試以繼續。"
+	},
+	"settings.harness.openLogin": {
+		"en": "Open login",
+		"zhTW": "開啟登入"
+	},
+	"settings.harness.openSetup": {
+		"en": "Open setup",
+		"zhTW": "開啟設定"
+	},
+	"settings.harness.loginOpened": {
+		"en": "Login opened",
+		"zhTW": "已開啟登入"
+	},
+	"settings.harness.setupOpened": {
+		"en": "Setup opened",
+		"zhTW": "已開啟設定"
+	},
+	"settings.harness.checkingLogin": {
+		"en": "Checking…",
+		"zhTW": "正在檢查…"
+	},
+	"settings.harness.copied": {
+		"en": "Copied",
+		"zhTW": "已複製"
+	},
+	"settings.harness.copyCommand": {
+		"en": "Copy command",
+		"zhTW": "複製指令"
+	},
+	"settings.harness.copyDiagnostics": {
+		"en": "Copy diagnostics",
+		"zhTW": "複製診斷資訊"
+	},
+	"settings.harness.expectedDestination": {
+		"en": "Expected destination",
+		"zhTW": "預期安裝位置"
+	},
+	"settings.harness.hideDiagnostics": {
+		"en": "Hide diagnostics",
+		"zhTW": "隱藏診斷資訊"
+	},
+	"settings.harness.install": {
+		"en": "Install",
+		"zhTW": "安裝"
+	},
+	"settings.harness.installMethod": {
+		"en": "Installation method",
+		"zhTW": "安裝方式"
+	},
+	"settings.harness.installFailed": {
+		"en": "Installation failed.",
+		"zhTW": "安裝失敗。"
+	},
+	"settings.harness.installed": {
+		"en": "Installed",
+		"zhTW": "已安裝"
+	},
+	"settings.harness.installing": {
+		"en": "Installing…",
+		"zhTW": "正在安裝…"
+	},
+	"settings.harness.instructions": {
+		"en": "Instructions",
+		"zhTW": "操作說明"
+	},
+	"settings.harness.interrupted": {
+		"en": "Interrupted",
+		"zhTW": "已中斷"
+	},
+	"settings.harness.loggedIn": {
+		"en": "Connected",
+		"zhTW": "已連線"
+	},
+	"settings.harness.loginUnknown": {
+		"en": "Login status unavailable",
+		"zhTW": "無法取得登入狀態"
+	},
+	"settings.harness.configurationUnknown": {
+		"en": "Setup status unavailable",
+		"zhTW": "無法取得設定狀態"
+	},
+	"settings.harness.login": {
+		"en": "Login",
+		"zhTW": "登入"
+	},
+	"settings.harness.loadFailed": {
+		"en": "Could not load harness installation status.",
+		"zhTW": "無法載入 Harness 安裝狀態。"
+	},
+	"settings.harness.manualRequired": {
+		"en": "Manual installation required.",
+		"zhTW": "需要手動安裝。"
+	},
+	"settings.harness.method": {
+		"en": "Method",
+		"zhTW": "方式"
+	},
+	"settings.harness.noResults": {
+		"en": "No harnesses match your search.",
+		"zhTW": "沒有符合搜尋條件的 Harness。"
+	},
+	"settings.harness.notLoggedIn": {
+		"en": "Signed out",
+		"zhTW": "已登出"
+	},
+	"settings.harness.notConfigured": {
+		"en": "Not set up",
+		"zhTW": "尚未設定"
+	},
+	"settings.harness.retry": {
+		"en": "Retry",
+		"zhTW": "重試"
+	},
+	"settings.harness.search": {
+		"en": "Search harnesses",
+		"zhTW": "搜尋 Harness"
+	},
+	"settings.harness.searchPlaceholder": {
+		"en": "Search harnesses",
+		"zhTW": "搜尋 Harness"
+	},
+	"settings.harness.showDiagnostics": {
+		"en": "Show diagnostics",
+		"zhTW": "顯示診斷資訊"
+	},
+	"settings.harness.setup": {
+		"en": "Set up",
+		"zhTW": "設定"
+	},
+	"settings.harness.startFailed": {
+		"en": "Could not start the installation.",
+		"zhTW": "無法開始安裝。"
+	},
+	"settings.harness.verifyFailed": {
+		"en": "{{agent}} finished installing, but Orchestrator could not find its executable.",
+		"zhTW": "{{agent}} 已安裝完成，但 Orchestrator 找不到它的執行檔。"
+	},
+	"settings.harness.verifyAgain": {
+		"en": "Verify again",
+		"zhTW": "再次驗證"
+	},
+	"settings.harness.verifying": {
+		"en": "Verifying…",
+		"zhTW": "正在驗證…"
+	},
+	"settings.language.de": {
+		"en": "Deutsch",
+		"zhTW": "Deutsch"
+	},
+	"settings.language.en": {
+		"en": "English",
+		"zhTW": "English"
+	},
+	"settings.language.es": {
+		"en": "Español",
+		"zhTW": "Español"
+	},
+	"settings.language.fr": {
+		"en": "Français",
+		"zhTW": "Français"
+	},
+	"settings.language.ptBR": {
+		"en": "Português (Brasil)",
+		"zhTW": "Português (Brasil)"
+	},
+	"settings.project.coAuthorCommitsDescription": {
+		"en": "When enabled, commits the agents make in this project list the Orchestrator GitHub App as a co-author. The commit author does not change.",
+		"zhTW": "啟用後，代理在此專案中建立的提交會將 Orchestrator GitHub App 列為共同作者。提交作者不會改變。"
+	},
+	"settings.project.coAuthorCommitsToggle": {
+		"en": "Add Orchestrator as a commit co-author",
+		"zhTW": "將 Orchestrator 加為提交的共同作者"
+	},
+	"settings.cloudProject.coAuthorCommitsUnsupported": {
+		"en": "This Cloud control plane does not support the co-author setting yet, so it stays on.",
+		"zhTW": "此 Cloud 控制平面尚不支援共同作者設定，因此會維持開啟。"
+	},
+	"settings.project.coderTitle": {
+		"en": "Coder",
+		"zhTW": "Coder"
+	},
+	"settings.project.autoReview": {
+		"en": "Auto review",
+		"zhTW": "自動審查"
+	},
+	"settings.project.autoReviewToggle": {
+		"en": "Auto review PRs",
+		"zhTW": "自動審查 PR"
+	},
+	"settings.project.workersRequestReviewDescription": {
+		"en": "When enabled, new workers start an Orchestrator review of their own PR once it is ready, and again after each fix. When disabled, workers ask before starting one.",
+		"zhTW": "啟用後，新的工作者會在自己的 PR 準備就緒時啟動 Orchestrator 審查，並在每次修正後再審查一次。停用時，工作者會先詢問再啟動審查。"
+	},
+	"settings.project.workersRequestReviewToggle": {
+		"en": "Workers request a built-in review",
+		"zhTW": "工作者要求內建審查"
+	},
+	"settings.project.autoReviewDescription": {
+		"en": "When enabled, new worker sessions will automatically review their pull requests. This can still be toggled per session after spawn.",
+		"zhTW": "啟用後，新的工作者工作階段會自動審查自己的提取要求。建立後仍可在每個工作階段中個別切換。"
+	},
+	"settings.project.scripts": {
+		"en": "Scripts",
+		"zhTW": "腳本"
+	},
+	"settings.project.workspaceSetup": {
+		"en": "Workspace setup",
+		"zhTW": "工作區準備"
+	},
+	"settings.project.setupHintGit": {
+		"en": "Runs before the agent starts in a new or recreated worktree.",
+		"zhTW": "在新的或重新建立的工作樹中、代理啟動前執行。"
+	},
+	"settings.project.setupHintScratch": {
+		"en": "Runs before the agent starts in a new or recreated scratch workspace.",
+		"zhTW": "在新的或重新建立的臨時工作區中、代理啟動前執行。"
+	},
+	"settings.project.setupPlatformHint": {
+		"en": "Shell: sh (macOS/Linux) or cmd (Windows). The same steps run on every platform.",
+		"zhTW": "Shell：sh（macOS/Linux）或 cmd（Windows）。所有平台都會執行相同的步驟。"
+	},
+	"settings.project.setupPaths": {
+		"en": "Path variables",
+		"zhTW": "路徑變數"
+	},
+	"settings.project.setupSourcePath": {
+		"en": "project folder",
+		"zhTW": "專案資料夾"
+	},
+	"settings.project.setupWorktreePath": {
+		"en": "workspace folder",
+		"zhTW": "工作區資料夾"
+	},
+	"settings.project.setupStep": {
+		"en": "Step {{number}}",
+		"zhTW": "步驟 {{number}}"
+	},
+	"settings.project.addSetupStep": {
+		"en": "Add step",
+		"zhTW": "新增步驟"
+	},
+	"settings.project.removeSetupStep": {
+		"en": "Remove step {{number}}",
+		"zhTW": "移除步驟 {{number}}"
+	},
+	"settings.project.workspaceCleanup": {
+		"en": "Workspace cleanup",
+		"zhTW": "工作區清理"
+	},
+	"settings.project.cleanupHint": {
+		"en": "Runs before a Git worktree is removed, not when you quit the app. Failed steps keep it for retry.",
+		"zhTW": "在移除 Git 工作樹之前執行，而不是在結束應用程式時執行。步驟失敗時會保留工作樹以便重試。"
+	},
+	"settings.project.cleanupPaths": {
+		"en": "Path variables",
+		"zhTW": "路徑變數"
+	},
+	"settings.project.cleanupSourcePath": {
+		"en": "project folder",
+		"zhTW": "專案資料夾"
+	},
+	"settings.project.cleanupWorktreePath": {
+		"en": "worktree to remove",
+		"zhTW": "要移除的工作樹"
+	},
+	"settings.project.cleanupStep": {
+		"en": "Step {{number}}",
+		"zhTW": "步驟 {{number}}"
+	},
+	"settings.project.addCleanupStep": {
+		"en": "Add step",
+		"zhTW": "新增步驟"
+	},
+	"settings.project.removeCleanupStep": {
+		"en": "Remove step {{number}}",
+		"zhTW": "移除步驟 {{number}}"
+	},
+	"settings.project.cleanupScratchUnavailable": {
+		"en": "Automatic cleanup commands are available for Git worktrees. Scratch workspaces preserve nonempty folders for safety.",
+		"zhTW": "自動清理指令僅適用於 Git 工作樹。為了安全起見，臨時工作區會保留非空的資料夾。"
+	},
+	"settings.project.cleanupRetryHint": {
+		"en": "Save changes before retrying. Worktrees with uncommitted changes stay intact.",
+		"zhTW": "重試前請先儲存變更。有未提交變更的工作樹會保持原樣。"
+	},
+	"settings.project.retryCleanup": {
+		"en": "Retry cleanup",
+		"zhTW": "重試清理"
+	},
+	"settings.project.cleanupRetryFailed": {
+		"en": "Could not retry cleanup.",
+		"zhTW": "無法重試清理。"
+	},
+	"settings.project.cleanupRetryResult": {
+		"en": "Cleaned {{cleaned}}; skipped {{skipped}}.",
+		"zhTW": "已清理 {{cleaned}} 個；略過 {{skipped}} 個。"
+	},
+	"settings.project.environment": {
+		"en": "Environment",
+		"zhTW": "環境"
+	},
+	"settings.project.environmentVariables": {
+		"en": "Environment variables",
+		"zhTW": "環境變數"
+	},
+	"settings.project.environmentCount_one": {
+		"en": "{{count}} variable",
+		"zhTW": "{{count}} 個變數"
+	},
+	"settings.project.environmentCount_other": {
+		"en": "{{count}} variables",
+		"zhTW": "{{count}} 個變數"
+	},
+	"settings.project.environmentEmptyTitle": {
+		"en": "No variables yet",
+		"zhTW": "尚無變數"
+	},
+	"settings.project.environmentEmptyHint": {
+		"en": "Add one variable or paste a .env file to configure new processes for this project.",
+		"zhTW": "新增一個變數或貼上 .env 檔案，即可為此專案的新處理程序設定環境。"
+	},
+	"settings.project.envName": {
+		"en": "Name",
+		"zhTW": "名稱"
+	},
+	"settings.project.envValue": {
+		"en": "Value",
+		"zhTW": "值"
+	},
+	"settings.project.envInvalid": {
+		"en": "Use unique variable names with letters, numbers, and underscores, starting with a letter or underscore.",
+		"zhTW": "變數名稱不可重複，只能使用英文字母、數字和底線，且須以字母或底線開頭。"
+	},
+	"settings.project.addVariable": {
+		"en": "Add variable",
+		"zhTW": "新增變數"
+	},
+	"settings.project.pasteVariables": {
+		"en": "Paste .env",
+		"zhTW": "貼上 .env"
+	},
+	"settings.project.envPasteHint": {
+		"en": "Paste KEY=value lines. Blank lines and comments are ignored. Matching names update the draft; review and save to apply.",
+		"zhTW": "貼上 KEY=value 格式的內容。空白行和註解會被忽略。名稱相同的項目會更新草稿；請檢查後儲存以套用。"
+	},
+	"settings.project.envPasteInvalid": {
+		"en": "Check line {{line}}. Use unique KEY=value entries; AO_ names are reserved.",
+		"zhTW": "請檢查第 {{line}} 行。KEY=value 項目不可重複；AO_ 開頭的名稱為保留字。"
+	},
+	"settings.project.envPastePending": {
+		"en": "Add the pasted entries to the draft before saving.",
+		"zhTW": "儲存前請先將貼上的項目加入草稿。"
+	},
+	"settings.project.envPasteCancel": {
+		"en": "Cancel",
+		"zhTW": "取消"
+	},
+	"settings.project.importVariables": {
+		"en": "Add to draft",
+		"zhTW": "加入草稿"
+	},
+	"settings.project.envImported": {
+		"en": "Pasted {{count}} entries into the draft.",
+		"zhTW": "已將 {{count}} 個項目貼入草稿。"
+	},
+	"settings.project.showVariable": {
+		"en": "Show value",
+		"zhTW": "顯示值"
+	},
+	"settings.project.hideVariable": {
+		"en": "Hide value",
+		"zhTW": "隱藏值"
+	},
+	"settings.project.removeVariable": {
+		"en": "Remove {{name}} variable",
+		"zhTW": "移除 {{name}} 變數"
+	},
+	"settings.updates.bytes": {
+		"en": "{{downloaded}} / {{total}} MB",
+		"zhTW": "{{downloaded}} / {{total}} MB"
+	},
+	"settings.updates.error.withReason": {
+		"en": "{{lead}} — {{reason}}",
+		"zhTW": "{{lead}} — {{reason}}"
+	},
+	"shell.workspaceCleanupPending": {
+		"en": "Cleanup pending: {{title}}",
+		"zhTW": "等待清理：{{title}}"
+	},
+	"shell.workspaceCleanupFailed": {
+		"en": "Workspace cleanup failed. Retry cleanup in project Scripts settings.",
+		"zhTW": "工作區清理失敗。請在專案的「腳本」設定中重試清理。"
+	},
+	"shell.workspaceCleanupDirty": {
+		"en": "Worktree has uncommitted changes. Retry cleanup after you save them.",
+		"zhTW": "工作樹有未提交的變更。儲存變更後再重試清理。"
+	},
+	"shell.openNewAgent": {
+		"en": "Open a new agent",
+		"zhTW": "開啟新代理"
+	},
+	"shell.dev": {
+		"en": "dev",
+		"zhTW": "dev"
+	},
+	"shell.pinProject": {
+		"en": "Pin to top",
+		"zhTW": "釘選到頂端"
+	},
+	"shell.unpinProject": {
+		"en": "Unpin",
+		"zhTW": "取消釘選"
+	},
+	"shell.memoryLegendAO": {
+		"en": "Orchestrator",
+		"zhTW": "Orchestrator"
+	},
+	"shell.cpuGraphAO": {
+		"en": "Orchestrator CPU",
+		"zhTW": "Orchestrator CPU"
+	},
+	"shell.memoryColumnCpu": {
+		"en": "CPU",
+		"zhTW": "CPU"
+	},
+	"shell.memoryColumnPid": {
+		"en": "PID",
+		"zhTW": "PID"
+	},
+	"shell.memoryCategory.ao": {
+		"en": "Orchestrator",
+		"zhTW": "Orchestrator"
+	},
+	"shell.memoryCategory.mcp": {
+		"en": "MCP",
+		"zhTW": "MCP"
+	},
+	"shell.memoryGroupApp": {
+		"en": "Orchestrator",
+		"zhTW": "Orchestrator"
+	},
+	"shortcut.updatedBody": {
+		"en": "{{name}} → {{binding}}",
+		"zhTW": "{{name}} → {{binding}}"
+	},
+	"startup.agentDescClaude": {
+		"en": "Anthropic Claude Code CLI",
+		"zhTW": "Anthropic Claude Code CLI"
+	},
+	"startup.agentDescCopilot": {
+		"en": "GitHub Copilot CLI",
+		"zhTW": "GitHub Copilot CLI"
+	},
+	"terminal.startupFailed": {
+		"en": "Session failed to start",
+		"zhTW": "工作階段啟動失敗"
+	},
+	"terminal.sessionTerminated": {
+		"en": "Session terminated",
+		"zhTW": "工作階段已終止"
+	},
+	"terminal.agentExited": {
+		"en": "Agent exited",
+		"zhTW": "代理已結束"
+	},
+	"terminal.agentExitedHelp": {
+		"en": "The agent stopped; the session and any surviving preview remain available. Resume the agent to continue.",
+		"zhTW": "代理已停止；工作階段及仍存在的預覽依然可用。恢復代理即可繼續。"
+	},
+	"files.closeAllTabs": {
+		"en": "Close all files",
+		"zhTW": "關閉所有檔案"
+	},
+	"files.closeTab": {
+		"en": "Close {{name}}",
+		"zhTW": "關閉 {{name}}"
+	},
+	"files.tabActions": {
+		"en": "File tab actions",
+		"zhTW": "檔案分頁動作"
+	},
+	"files.error.searchWorkspace": {
+		"en": "Unable to search workspace files",
+		"zhTW": "無法搜尋工作區檔案"
+	},
+	"files.browseAll": {
+		"en": "Browse all files",
+		"zhTW": "瀏覽所有檔案"
+	},
+	"files.reviewChanges": {
+		"en": "Changes",
+		"zhTW": "變更"
+	},
+	"files.allFiles": {
+		"en": "Files",
+		"zhTW": "檔案"
+	},
+	"files.viewMode": {
+		"en": "File view",
+		"zhTW": "檔案檢視"
+	},
+	"files.fileDisplayMode": {
+		"en": "File display mode",
+		"zhTW": "檔案顯示模式"
+	},
+	"files.backToChanges": {
+		"en": "Back to changes",
+		"zhTW": "返回變更"
+	},
+	"files.reviewProgress": {
+		"en": "{{viewed}} of {{total}} viewed",
+		"zhTW": "已檢視 {{viewed}} / {{total}}"
+	},
+	"files.ignoreWhitespace": {
+		"en": "Ignore whitespace",
+		"zhTW": "忽略空白字元"
+	},
+	"files.noFilterMatches": {
+		"en": "No changed files match this filter.",
+		"zhTW": "沒有符合此篩選條件的變更檔案。"
+	},
+	"files.openFullFile": {
+		"en": "Open full file: {{file}}",
+		"zhTW": "開啟完整檔案：{{file}}"
+	},
+	"files.openRendered": {
+		"en": "Open rendered view: {{file}}",
+		"zhTW": "開啟預覽畫面：{{file}}"
+	},
+	"files.markViewed": {
+		"en": "Mark {{file}} as viewed",
+		"zhTW": "將 {{file}} 標記為已檢視"
+	},
+	"files.markUnviewed": {
+		"en": "Mark {{file}} as not viewed",
+		"zhTW": "將 {{file}} 標記為未檢視"
+	},
+	"files.deferredDiff": {
+		"en": "This diff is deferred or unavailable. Open the full file to inspect it.",
+		"zhTW": "此差異已延後載入或無法使用。請開啟完整檔案查看。"
+	},
+	"files.loadDiff": {
+		"en": "Load diff",
+		"zhTW": "載入差異"
+	},
+	"files.wrapLines": {
+		"en": "Wrap lines",
+		"zhTW": "自動換行"
+	},
+	"files.diffUnavailableReason": {
+		"en": "Diff unavailable: {{reason}}.",
+		"zhTW": "無法顯示差異：{{reason}}。"
+	},
+	"files.fileView": {
+		"en": "File",
+		"zhTW": "檔案"
+	},
+	"files.rendered": {
+		"en": "Rich preview",
+		"zhTW": "豐富預覽"
+	},
+	"files.addFeedback": {
+		"en": "Add feedback",
+		"zhTW": "新增意見"
+	},
+	"files.openFullFileGeneric": {
+		"en": "Open full file",
+		"zhTW": "開啟完整檔案"
+	},
+	"files.openRichPreview": {
+		"en": "Open rich preview",
+		"zhTW": "開啟豐富預覽"
+	},
+	"files.openDiffInCenter": {
+		"en": "Open diff in center",
+		"zhTW": "在中間區域開啟差異"
+	},
+	"files.moreFileActions": {
+		"en": "More actions",
+		"zhTW": "更多動作"
+	},
+	"files.editFile": {
+		"en": "Edit file",
+		"zhTW": "編輯檔案"
+	},
+	"files.saveFile": {
+		"en": "Save",
+		"zhTW": "儲存"
+	},
+	"files.cancelEditing": {
+		"en": "Cancel",
+		"zhTW": "取消"
+	},
+	"files.editFileLabel": {
+		"en": "Edit {{file}}",
+		"zhTW": "編輯 {{file}}"
+	},
+	"files.saveError": {
+		"en": "Unable to save workspace file",
+		"zhTW": "無法儲存工作區檔案"
+	},
+	"files.imageDimensions": {
+		"en": "{{width}} × {{height}}",
+		"zhTW": "{{width}} × {{height}}"
+	},
+	"files.error.loadWorkspaceTree": {
+		"en": "Unable to load workspace tree",
+		"zhTW": "無法載入工作區檔案樹"
+	},
+	"files.explorer.filter": {
+		"en": "Filter files",
+		"zhTW": "篩選檔案"
+	},
+	"files.explorer.filterPlaceholder": {
+		"en": "Filter files",
+		"zhTW": "篩選檔案"
+	},
+	"files.explorer.changedOnly": {
+		"en": "Changed only",
+		"zhTW": "僅顯示已變更"
+	},
+	"files.explorer.empty": {
+		"en": "This folder is empty.",
+		"zhTW": "此資料夾是空的。"
+	},
+	"files.explorer.noFilterMatches": {
+		"en": "No files match this filter.",
+		"zhTW": "沒有符合此篩選條件的檔案。"
+	},
+	"files.explorer.tree": {
+		"en": "File tree",
+		"zhTW": "檔案樹"
+	},
+	"files.explorer.selectFile": {
+		"en": "Select a file to preview.",
+		"zhTW": "選擇一個檔案以預覽。"
+	},
+	"files.explorer.tooLarge": {
+		"en": "File is too large to preview ({{size}}).",
+		"zhTW": "檔案太大，無法預覽（{{size}}）。"
+	},
+	"files.explorer.backToTree": {
+		"en": "Back to file tree",
+		"zhTW": "返回檔案樹"
+	},
+	"files.changeSource": {
+		"en": "Choose change source",
+		"zhTW": "選擇變更來源"
+	},
+	"files.workingChanges": {
+		"en": "Working changes",
+		"zhTW": "工作中的變更"
+	},
+	"files.commits": {
+		"en": "Commits",
+		"zhTW": "提交"
+	},
+	"files.commitHistory": {
+		"en": "Commit history",
+		"zhTW": "提交記錄"
+	},
+	"files.noCommits": {
+		"en": "No commits found.",
+		"zhTW": "找不到任何提交。"
+	},
+	"files.branches.prLabel": {
+		"en": "#{{number}} · {{branch}}",
+		"zhTW": "#{{number}} · {{branch}}"
+	},
+	"files.noneInSource": {
+		"en": "No files in this change source.",
+		"zhTW": "此變更來源中沒有檔案。"
+	},
+	"newTask.task": {
+		"en": "Task",
+		"zhTW": "任務"
+	},
+	"newTask.model": {
+		"en": "Model",
+		"zhTW": "模型"
+	},
+	"newTask.taskRequired": {
+		"en": "Task is required.",
+		"zhTW": "必須填寫任務。"
+	},
+	"settings.models.workerRole": {
+		"en": "Worker",
+		"zhTW": "工作者"
+	},
+	"chat.artifact.label": {
+		"en": "Artifact",
+		"zhTW": "產物"
+	},
+	"artifacts.title": {
+		"en": "Artifacts",
+		"zhTW": "產物"
+	},
+	"artifacts.loading": {
+		"en": "Loading artifacts",
+		"zhTW": "正在載入產物"
+	},
+	"artifacts.search": {
+		"en": "Search artifacts",
+		"zhTW": "搜尋產物"
+	},
+	"artifacts.allProjects": {
+		"en": "All projects",
+		"zhTW": "所有專案"
+	},
+	"artifacts.noMatches": {
+		"en": "No matches",
+		"zhTW": "沒有符合的結果"
+	},
+	"artifacts.clearFilters": {
+		"en": "Clear filters",
+		"zhTW": "清除篩選"
+	},
+	"artifacts.empty.title": {
+		"en": "Create your first artifact",
+		"zhTW": "建立你的第一個產物"
+	},
+	"artifacts.empty.description": {
+		"en": "Artifacts are pages and documents an agent writes for you. Pick where the session should live.",
+		"zhTW": "產物是代理為你撰寫的網頁和文件。請選擇工作階段要放在哪裡。"
+	},
+	"artifacts.create": {
+		"en": "Create artifact",
+		"zhTW": "建立產物"
+	},
+	"artifacts.new": {
+		"en": "New artifact",
+		"zhTW": "新增產物"
+	},
+	"artifacts.creating": {
+		"en": "Creating",
+		"zhTW": "正在建立"
+	},
+	"artifacts.createError": {
+		"en": "Unable to start the artifact session",
+		"zhTW": "無法啟動產物工作階段"
+	},
+	"artifacts.newSessionName": {
+		"en": "New artifact",
+		"zhTW": "新產物"
+	},
+	"artifacts.noAgent.title": {
+		"en": "No agent is ready",
+		"zhTW": "沒有可用的代理"
+	},
+	"artifacts.noAgent.description": {
+		"en": "Install or sign in to an agent to create artifacts.",
+		"zhTW": "請安裝或登入一個代理以建立產物。"
+	},
+	"artifacts.noAgent.action": {
+		"en": "Open agent settings",
+		"zhTW": "開啟代理設定"
+	},
+	"automations.title": {
+		"en": "Automations",
+		"zhTW": "自動化"
+	},
+	"automations.new": {
+		"en": "New automation",
+		"zhTW": "新增自動化"
+	},
+	"automations.loading": {
+		"en": "Loading automations…",
+		"zhTW": "正在載入自動化…"
+	},
+	"automations.updateError": {
+		"en": "Could not update automation",
+		"zhTW": "無法更新自動化"
+	},
+	"automations.create": {
+		"en": "Create automation",
+		"zhTW": "建立自動化"
+	},
+	"automations.creating": {
+		"en": "Creating…",
+		"zhTW": "正在建立…"
+	},
+	"automations.cancel": {
+		"en": "Cancel",
+		"zhTW": "取消"
+	},
+	"automations.timezone": {
+		"en": "Timezone: {{timezone}}",
+		"zhTW": "時區：{{timezone}}"
+	},
+	"automations.enabled": {
+		"en": "Enabled",
+		"zhTW": "已啟用"
+	},
+	"automations.disabled": {
+		"en": "Disabled",
+		"zhTW": "已停用"
+	},
+	"automations.enable": {
+		"en": "Enable {{name}}",
+		"zhTW": "啟用 {{name}}"
+	},
+	"automations.disable": {
+		"en": "Disable {{name}}",
+		"zhTW": "停用 {{name}}"
+	},
+	"automations.nextRun": {
+		"en": "Next run",
+		"zhTW": "下次執行"
+	},
+	"automations.paused": {
+		"en": "Paused",
+		"zhTW": "已暫停"
+	},
+	"automations.neverRun": {
+		"en": "Never run",
+		"zhTW": "從未執行"
+	},
+	"automations.agent": {
+		"en": "Agent",
+		"zhTW": "代理"
+	},
+	"automations.projectDefault": {
+		"en": "Project default",
+		"zhTW": "專案預設"
+	},
+	"automations.empty.title": {
+		"en": "No automations yet",
+		"zhTW": "尚無自動化"
+	},
+	"automations.delete.title": {
+		"en": "Delete automation?",
+		"zhTW": "要刪除自動化嗎？"
+	},
+	"automations.delete.description": {
+		"en": "This permanently deletes {{name}} and its run history. Linked sessions remain available.",
+		"zhTW": "這會永久刪除 {{name}} 及其執行記錄。已連結的工作階段仍會保留。"
+	},
+	"automations.delete.confirm": {
+		"en": "Delete automation",
+		"zhTW": "刪除自動化"
+	},
+	"automations.delete.aria": {
+		"en": "Delete {{name}}",
+		"zhTW": "刪除 {{name}}"
+	},
+	"automations.runs.title": {
+		"en": "Run history",
+		"zhTW": "執行記錄"
+	},
+	"automations.runs.loading": {
+		"en": "Loading runs…",
+		"zhTW": "正在載入執行記錄…"
+	},
+	"automations.runs.openSession": {
+		"en": "Open session",
+		"zhTW": "開啟工作階段"
+	},
+	"automations.runs.empty": {
+		"en": "No runs yet.",
+		"zhTW": "尚無執行記錄。"
+	},
+	"automations.runs.show": {
+		"en": "Show run history for {{name}}",
+		"zhTW": "顯示 {{name}} 的執行記錄"
+	},
+	"automations.runs.hide": {
+		"en": "Hide run history for {{name}}",
+		"zhTW": "隱藏 {{name}} 的執行記錄"
+	},
+	"automations.frequency.recurring": {
+		"en": "recurring",
+		"zhTW": "重複"
+	},
+	"automations.frequency.secondly": {
+		"en": "secondly",
+		"zhTW": "每秒"
+	},
+	"automations.frequency.minutely": {
+		"en": "minutely",
+		"zhTW": "每分鐘"
+	},
+	"automations.frequency.hourly": {
+		"en": "hourly",
+		"zhTW": "每小時"
+	},
+	"automations.frequency.daily": {
+		"en": "daily",
+		"zhTW": "每天"
+	},
+	"automations.frequency.weekly": {
+		"en": "weekly",
+		"zhTW": "每週"
+	},
+	"automations.frequency.monthly": {
+		"en": "monthly",
+		"zhTW": "每月"
+	},
+	"automations.frequency.yearly": {
+		"en": "yearly",
+		"zhTW": "每年"
+	},
+	"automations.create.close": {
+		"en": "Close create automation",
+		"zhTW": "關閉建立自動化"
+	},
+	"automations.validation.summary": {
+		"en": "Complete the highlighted fields.",
+		"zhTW": "請完成標示的欄位。"
+	},
+	"automations.validation.project": {
+		"en": "Select a project.",
+		"zhTW": "請選擇專案。"
+	},
+	"automations.validation.name": {
+		"en": "Enter a name.",
+		"zhTW": "請輸入名稱。"
+	},
+	"automations.validation.prompt": {
+		"en": "Enter a prompt.",
+		"zhTW": "請輸入提示詞。"
+	},
+	"automations.validation.rrule": {
+		"en": "Enter an RRule.",
+		"zhTW": "請輸入 RRule。"
+	},
+	"automations.validation.hour": {
+		"en": "Enter an hour from 00 to 23.",
+		"zhTW": "請輸入 00 到 23 的小時。"
+	},
+	"automations.validation.minute": {
+		"en": "Enter minutes from 00 to 59.",
+		"zhTW": "請輸入 00 到 59 的分鐘。"
+	},
+	"automations.validation.date": {
+		"en": "Enter a day of the month from 1 to 31.",
+		"zhTW": "請輸入 1 到 31 的日期。"
+	},
+	"automations.field.project": {
+		"en": "Project",
+		"zhTW": "專案"
+	},
+	"automations.field.frequency": {
+		"en": "Frequency",
+		"zhTW": "頻率"
+	},
+	"automations.field.date": {
+		"en": "Date",
+		"zhTW": "日期"
+	},
+	"automations.field.weekday": {
+		"en": "Day",
+		"zhTW": "星期"
+	},
+	"automations.weekday.MO": {
+		"en": "Monday",
+		"zhTW": "星期一"
+	},
+	"automations.weekday.TU": {
+		"en": "Tuesday",
+		"zhTW": "星期二"
+	},
+	"automations.weekday.WE": {
+		"en": "Wednesday",
+		"zhTW": "星期三"
+	},
+	"automations.weekday.TH": {
+		"en": "Thursday",
+		"zhTW": "星期四"
+	},
+	"automations.weekday.FR": {
+		"en": "Friday",
+		"zhTW": "星期五"
+	},
+	"automations.weekday.SA": {
+		"en": "Saturday",
+		"zhTW": "星期六"
+	},
+	"automations.weekday.SU": {
+		"en": "Sunday",
+		"zhTW": "星期日"
+	},
+	"automations.field.name": {
+		"en": "Name",
+		"zhTW": "名稱"
+	},
+	"automations.field.prompt": {
+		"en": "Prompt",
+		"zhTW": "提示詞"
+	},
+	"automations.field.schedule": {
+		"en": "Schedule",
+		"zhTW": "排程"
+	},
+	"automations.field.rrule": {
+		"en": "RRule",
+		"zhTW": "RRule"
+	},
+	"automations.field.hour": {
+		"en": "Hour",
+		"zhTW": "時"
+	},
+	"automations.field.minute": {
+		"en": "Minute",
+		"zhTW": "分"
+	},
+	"automations.projectPlaceholder": {
+		"en": "Select a project",
+		"zhTW": "選擇專案"
+	},
+	"automations.schedule.daily": {
+		"en": "Daily",
+		"zhTW": "每天"
+	},
+	"automations.schedule.weekly": {
+		"en": "Weekly",
+		"zhTW": "每週"
+	},
+	"automations.schedule.custom": {
+		"en": "Custom",
+		"zhTW": "自訂"
+	},
+	"automations.customFrequency.daily": {
+		"en": "Daily",
+		"zhTW": "每天"
+	},
+	"automations.customFrequency.weekly": {
+		"en": "Weekly",
+		"zhTW": "每週"
+	},
+	"automations.customFrequency.monthly": {
+		"en": "Monthly",
+		"zhTW": "每月"
+	},
+	"settings.project.reviewer": {
+		"en": "Reviewer",
+		"zhTW": "審查者"
+	},
+	"chat.welcome.artifactHeading": {
+		"en": "What do you want to create?",
+		"zhTW": "你想建立什麼？"
+	},
+	"chat.welcome.artifactPlaceholder": {
+		"en": "Describe the page or document you want",
+		"zhTW": "描述你想要的網頁或文件"
+	},
+	"chat.welcome.artifactPrompts": {
+		"en": "Sample artifact requests",
+		"zhTW": "產物需求範例"
+	},
+	"chat.welcome.artifactPrompt.plan": {
+		"en": "Write a one-page plan for a new feature",
+		"zhTW": "為新功能撰寫一頁式計畫"
+	},
+	"chat.welcome.artifactPrompt.compare": {
+		"en": "Build an HTML page comparing three options side by side",
+		"zhTW": "建立一個並排比較三個選項的 HTML 網頁"
+	},
+	"chat.welcome.artifactPrompt.notes": {
+		"en": "Turn my rough notes into a polished Markdown document",
+		"zhTW": "把我的粗略筆記整理成精美的 Markdown 文件"
+	},
+	"chat.welcome.artifactPrompt.slides": {
+		"en": "Make a short slide deck about my project",
+		"zhTW": "為我的專案製作一份簡短的簡報"
+	},
+	"chat.welcome.prompts": {
+		"en": "Sample requests",
+		"zhTW": "需求範例"
+	},
+	"chat.welcome.prompt.review": {
+		"en": "Review my recent changes for bugs",
+		"zhTW": "檢查我最近的變更有沒有錯誤"
+	},
+	"chat.welcome.prompt.tests": {
+		"en": "Add tests for the code I am working on",
+		"zhTW": "為我正在處理的程式碼新增測試"
+	},
+	"chat.welcome.prompt.trace": {
+		"en": "Walk me through how a request flows through this code",
+		"zhTW": "帶我了解一個請求如何在這段程式碼中流動"
+	},
+	"chat.welcome.prompt.simplify": {
+		"en": "Clean up and simplify the code I am working on",
+		"zhTW": "整理並簡化我正在處理的程式碼"
+	},
+	"remote.aoCloud": {
+		"en": "Orchestrator Cloud",
+		"zhTW": "Orchestrator Cloud"
+	},
+	"remote.addressPlaceholder": {
+		"en": "http://machine:port",
+		"zhTW": "http://machine:port"
+	},
+	"cues.startupInterrupted": {
+		"en": "Startup cue interrupted.",
+		"zhTW": "啟動 Cue 已中斷。"
+	},
+	"cues.startupFailed": {
+		"en": "Startup cue failed; session continued.",
+		"zhTW": "啟動 Cue 失敗；工作階段已繼續。"
+	},
+	"cues.startupRunning": {
+		"en": "Running startup cue: {{name}}… ({{elapsed}}s)",
+		"zhTW": "正在執行啟動 Cue：{{name}}…（{{elapsed}} 秒）"
+	},
+	"cues.terminal": {
+		"en": "Terminal",
+		"zhTW": "終端機"
+	},
+	"cues.startupQueued": {
+		"en": "Preparing the worktree. Messages are queued until the command finishes.",
+		"zhTW": "正在準備工作樹。訊息會先排入佇列，直到指令完成。"
+	},
+	"cues.cancelling": {
+		"en": "Cancelling…",
+		"zhTW": "正在取消…"
+	},
+	"cues.cancelSetup": {
+		"en": "Cancel setup",
+		"zhTW": "取消準備"
+	},
+	"cues.dismissStartupError": {
+		"en": "Dismiss startup cue error",
+		"zhTW": "關閉啟動 Cue 錯誤"
+	},
+	"cues.commandAndOutput": {
+		"en": "Command and output: {{name}}",
+		"zhTW": "指令與輸出：{{name}}"
+	},
+	"cues.noCommandOutput": {
+		"en": "No command output.",
+		"zhTW": "沒有指令輸出。"
+	},
+	"sideChat.stagedFiles": {
+		"en": "Staged files",
+		"zhTW": "已暫存的檔案"
+	},
+	"sideChat.remove": {
+		"en": "Remove {{value1}}",
+		"zhTW": "移除 {{value1}}"
+	},
+	"sideChat.attachedFiles": {
+		"en": "Attached files",
+		"zhTW": "已附加的檔案"
+	},
+	"sideChat.agentIsWorkingThisSendsWhenItFinishes": {
+		"en": "Agent is working — this sends when it finishes",
+		"zhTW": "代理正在工作 — 完成後會送出此訊息"
+	},
+	"sideChat.messageTheAgent": {
+		"en": "Message the agent…",
+		"zhTW": "傳訊息給代理…"
+	},
+	"sideChat.theControllerIsNotConnected": {
+		"en": "The controller is not connected",
+		"zhTW": "控制器尚未連線"
+	},
+	"sideChat.messageTools": {
+		"en": "Message tools",
+		"zhTW": "訊息工具"
+	},
+	"sideChat.attachAFile": {
+		"en": "Attach a file",
+		"zhTW": "附加檔案"
+	},
+	"sideChat.stopTurn": {
+		"en": "Stop turn",
+		"zhTW": "停止本輪"
+	},
+	"sideChat.sendMessage": {
+		"en": "Send message",
+		"zhTW": "傳送訊息"
+	},
+	"sideChat.sideChats": {
+		"en": "Side chats",
+		"zhTW": "側邊聊天"
+	},
+	"sideChat.currentSideChat": {
+		"en": "Current side chat",
+		"zhTW": "目前的側邊聊天"
+	},
+	"sideChat.newSideChat": {
+		"en": "New side chat",
+		"zhTW": "新增側邊聊天"
+	},
+	"sideChat.rename": {
+		"en": "Rename",
+		"zhTW": "重新命名"
+	},
+	"sideChat.closeSideChat": {
+		"en": "Close side chat",
+		"zhTW": "關閉側邊聊天"
+	},
+	"sideChat.hideSideChat": {
+		"en": "Hide side chat",
+		"zhTW": "隱藏側邊聊天"
+	},
+	"sideChat.hideSidebarAndKeepYourSideChats": {
+		"en": "Hide sidebar and keep your side chats",
+		"zhTW": "隱藏側邊欄並保留你的側邊聊天"
+	},
+	"sideChat.aSeparateThreadFromYourMainChat": {
+		"en": "A separate thread from your main chat",
+		"zhTW": "與主聊天分開的獨立對話串"
+	},
+	"sideChat.sideChatName": {
+		"en": "Side chat name",
+		"zhTW": "側邊聊天名稱"
+	},
+	"sideChat.save": {
+		"en": "Save",
+		"zhTW": "儲存"
+	},
+	"sideChat.cancel": {
+		"en": "Cancel",
+		"zhTW": "取消"
+	},
+	"sideChat.closeSideChatConfirm": {
+		"en": "Close side chat?",
+		"zhTW": "要關閉側邊聊天嗎？"
+	},
+	"sideChat.closeThisSideChatAndStopItsRunningWorkConfirm": {
+		"en": "Close this side chat and stop its running work?",
+		"zhTW": "要關閉此側邊聊天並停止它正在進行的工作嗎？"
+	},
+	"sideChat.keepSideChat": {
+		"en": "Keep side chat",
+		"zhTW": "保留側邊聊天"
+	},
+	"sideChat.sideChatMessages": {
+		"en": "Side chat {{value1}} messages",
+		"zhTW": "側邊聊天 {{value1}} 的訊息"
+	},
+	"sideChat.askASideQuestion": {
+		"en": "Ask a side question",
+		"zhTW": "提出旁支問題"
+	},
+	"sideChat.exploreAFollowUpWhileYourMainChatContinues": {
+		"en": "Explore a follow-up while your main chat continues.",
+		"zhTW": "在主聊天繼續進行時，探索延伸問題。"
+	},
+	"sideChat.loadEarlierMessages": {
+		"en": "Load earlier messages",
+		"zhTW": "載入較早的訊息"
+	},
+	"sideChat.openRequestedUrl": {
+		"en": "Open requested URL",
+		"zhTW": "開啟要求的網址"
+	},
+	"sideChat.submit": {
+		"en": "Submit",
+		"zhTW": "送出"
+	},
+	"sideChat.decline": {
+		"en": "Decline",
+		"zhTW": "拒絕"
+	},
+	"sideChat.working": {
+		"en": "Working…",
+		"zhTW": "正在工作…"
+	},
+	"sideChat.retryQuestion": {
+		"en": "Retry question",
+		"zhTW": "重試問題"
+	},
+	"sideChat.retryConnection": {
+		"en": "Retry connection",
+		"zhTW": "重試連線"
+	},
+	"sideChat.deliveryIsUnconfirmedRetryTheOriginalQuestionBeforeSendingAnother": {
+		"en": "Delivery is unconfirmed. Retry the original question before sending another.",
+		"zhTW": "尚未確認送達。請先重試原本的問題，再傳送新的問題。"
+	},
+	"sideChat.cancelHandoff": {
+		"en": "Cancel handoff",
+		"zhTW": "取消轉交"
+	},
+	"sideChat.finishCancellation": {
+		"en": "Finish cancelling",
+		"zhTW": "完成取消"
+	},
+	"sideChat.cancelHandoffHelp": {
+		"en": "Cancelling stops retries and keeps your current draft. The question may already have reached its destination.",
+		"zhTW": "取消會停止重試並保留你目前的草稿。問題可能已經送達目的地。"
+	},
+	"sideChat.retryDelivery": {
+		"en": "Retry delivery",
+		"zhTW": "重試傳送"
+	},
+	"sideChat.sideChatIsUnavailable": {
+		"en": "Side chat is unavailable",
+		"zhTW": "無法使用側邊聊天"
+	},
+	"sideChat.openingSideChat": {
+		"en": "Opening side chat…",
+		"zhTW": "正在開啟側邊聊天…"
+	},
+	"sideChat.yourDraftStaysInThisThreadTryLoadingItAgainOrReturnToTheMainChatWhileTheConnectionRetriesAutomatically": {
+		"en": "Your draft stays in this thread. Try loading it again, or return to the main chat while the connection retries automatically.",
+		"zhTW": "你的草稿會保留在此對話串中。請再次嘗試載入，或在連線自動重試時返回主聊天。"
+	},
+	"sideChat.preparingThisSeparateThreadYouCanKeepWorkingInTheMainChat": {
+		"en": "Preparing this separate thread. You can keep working in the main chat.",
+		"zhTW": "正在準備這個獨立對話串。你可以繼續在主聊天中工作。"
+	},
+	"sideChat.retryLoading": {
+		"en": "Retry loading",
+		"zhTW": "重新載入"
+	},
+	"sideChat.askASideQuestionWhileMainChatContinues": {
+		"en": "Ask a side question while main chat continues.",
+		"zhTW": "在主聊天繼續進行時提出旁支問題。"
+	},
+	"sideChat.sideChatsAreAvailableOnlyForLocalDesktopChatSessions": {
+		"en": "Side chats are available only for local desktop chat sessions.",
+		"zhTW": "側邊聊天僅適用於本機桌面版聊天工作階段。"
+	},
+	"sideChat.opening": {
+		"en": "Opening…",
+		"zhTW": "正在開啟…"
+	},
+	"inspector.sideChat": {
+		"en": "Side chat",
+		"zhTW": "側邊聊天"
+	},
+	"sideChat.unavailable": {
+		"en": "Side chats are available in local desktop chat sessions.",
+		"zhTW": "側邊聊天可在本機桌面版聊天工作階段中使用。"
+	},
+	"sideChat.editingQueuedMessage": {
+		"en": "Editing queued message",
+		"zhTW": "正在編輯佇列中的訊息"
+	},
+	"sideChat.editQueuedSideQuestion": {
+		"en": "Edit queued side question",
+		"zhTW": "編輯佇列中的旁支問題"
+	},
+	"sideChat.aboutIsolation": {
+		"en": "About side-chat isolation",
+		"zhTW": "關於側邊聊天的隔離方式"
+	},
+	"sideChat.forkPoint": {
+		"en": "Frozen fork point: {{turn}}",
+		"zhTW": "固定分岔點：{{turn}}"
+	},
+	"sideChat.noInheritedTurns": {
+		"en": "Created before any completed main-chat turn.",
+		"zhTW": "建立於主聊天完成任何一輪對話之前。"
+	},
+	"sideChat.tabs": {
+		"en": "Side chat tabs",
+		"zhTW": "側邊聊天分頁"
+	},
+	"sideChat.renameSideChat": {
+		"en": "Rename side chat",
+		"zhTW": "重新命名側邊聊天"
+	},
+	"sideChat.closeNamed": {
+		"en": "Close {{name}}",
+		"zhTW": "關閉 {{name}}"
+	},
+	"sideChat.closeNamedConfirm": {
+		"en": "Close {{name}}?",
+		"zhTW": "要關閉 {{name}} 嗎？"
+	},
+	"sideChat.closeExplanation": {
+		"en": "Closing stops this side chat’s running work and removes its conversation and draft.",
+		"zhTW": "關閉會停止此側邊聊天正在進行的工作，並移除它的對話與草稿。"
+	},
+	"sideChat.addToChat": {
+		"en": "Add to chat",
+		"zhTW": "加入聊天"
+	},
+	"settings.billing.planEnterprise": {
+		"en": "Enterprise",
+		"zhTW": "企業版"
+	},
+	"files.readOnlySnapshot": {
+		"en": "This revision is read-only. Open the workspace copy to edit.",
+		"zhTW": "此版本為唯讀。請開啟工作區副本進行編輯。"
+	},
+	"files.treeTruncated": {
+		"en": "Some paths are not shown. Narrow the filter to find more files.",
+		"zhTW": "部分路徑未顯示。請縮小篩選範圍以找到更多檔案。"
+	},
+	"files.finishEditingToOpen": {
+		"en": "Save or cancel editing before opening in the center.",
+		"zhTW": "在中間區域開啟前，請先儲存或取消編輯。"
+	},
+	"files.previousVersionAt": {
+		"en": "Previous version at {{revision}}",
+		"zhTW": "{{revision}} 的先前版本"
+	},
+	"usage.speed.flex": {
+		"en": "Flex",
+		"zhTW": "Flex"
+	},
+	"sessionImport.offerMore": {
+		"en": "+{{count}}",
+		"zhTW": "+{{count}}"
+	},
+	"chat.capturedSelectionTruncated": {
+		"en": "Captured selection truncated",
+		"zhTW": "擷取的選取範圍已被截斷"
+	},
+	"chat.draft.annotationLimit": {
+		"en": "You can attach up to eight annotations. Remove one before adding another.",
+		"zhTW": "最多可附加八個標註。請先移除一個再新增。"
+	},
+	"chat.draft.fileReferencesUnsupported": {
+		"en": "This chat does not support file annotations. Reconnect to an updated daemon or remove the file annotations.",
+		"zhTW": "此聊天不支援檔案標註。請重新連線到已更新的常駐程式，或移除檔案標註。"
+	},
+	"chat.draft.fileReferencesSideUnsupported": {
+		"en": "File annotations cannot be sent to a side chat yet. Remove them or send this message in the main chat.",
+		"zhTW": "目前還無法將檔案標註傳送到側邊聊天。請移除標註，或改在主聊天中傳送此訊息。"
+	},
+	"chat.draft.fileReferencesCompactUnsupported": {
+		"en": "Remove file annotations before running /compact.",
+		"zhTW": "執行 /compact 前請先移除檔案標註。"
+	},
+	"chat.fileAnnotationChanged": {
+		"en": "Source changed.",
+		"zhTW": "原始內容已變更。"
+	},
+	"chat.fileAnnotationUnavailable": {
+		"en": "Source unavailable.",
+		"zhTW": "無法取得原始內容。"
+	},
+	"chat.fileAnnotationCapturedPreview": {
+		"en": "Showing captured selection.",
+		"zhTW": "正在顯示擷取的選取範圍。"
+	},
+	"chat.fileAnnotationOpen": {
+		"en": "Open selected lines",
+		"zhTW": "開啟選取的程式碼行"
+	},
+	"chat.fileAnnotationOpenFile": {
+		"en": "Open file",
+		"zhTW": "開啟檔案"
+	},
+	"chat.fileAnnotationLoading": {
+		"en": "Loading selected lines…",
+		"zhTW": "正在載入選取的程式碼行…"
+	},
+	"chat.fileAnnotationLoadFailed": {
+		"en": "Could not load the selected lines.",
+		"zhTW": "無法載入選取的程式碼行。"
+	},
+	"chat.fileAnnotationChangedDuringOpen": {
+		"en": "The selected lines could not be verified in this view. Reopen the annotation to view the captured selection.",
+		"zhTW": "無法在此檢視中驗證選取的程式碼行。請重新開啟標註以查看擷取的選取範圍。"
+	},
+	"chat.fileAnnotationMoved": {
+		"en": "Source moved.",
+		"zhTW": "原始內容已移動。"
+	},
+	"chat.fileAnnotationAmbiguous": {
+		"en": "Selected code appears in more than one location.",
+		"zhTW": "選取的程式碼出現在多個位置。"
+	},
+	"chat.fileAnnotationTruncated": {
+		"en": "Source navigation is unavailable for a truncated selection.",
+		"zhTW": "選取範圍已被截斷，無法跳至原始位置。"
+	},
+	"chat.fileAnnotationRetry": {
+		"en": "Retry source check",
+		"zhTW": "重新檢查原始內容"
+	},
+	"shareLink.placeholder": {
+		"en": "ao-app://share/…",
+		"zhTW": "ao-app://share/…"
+	},
+	"share.people.more": {
+		"en": "+{{count}}",
+		"zhTW": "+{{count}}"
+	},
+	"settings.harness.loginUi.claudeKeyPlaceholder": {
+		"en": "sk-ant-…",
+		"zhTW": "sk-ant-…"
+	},
+	"settings.harness.loginUi.setupTokenPlaceholder": {
+		"en": "sk-ant-oat01-…",
+		"zhTW": "sk-ant-oat01-…"
+	},
+	"teams.field.teamMembersAll": {
+		"en": "{{people}} · {{names}}",
+		"zhTW": "{{people}} · {{names}}"
+	},
+	"coder.repos.urlPlaceholder": {
+		"en": "https://github.com/owner/repo",
+		"zhTW": "https://github.com/owner/repo"
+	}
+}

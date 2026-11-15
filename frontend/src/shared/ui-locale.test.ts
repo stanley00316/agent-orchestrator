@@ -10,9 +10,10 @@ import {
 
 describe("shared UI locale schema", () => {
 	it("accepts only supported locale identifiers", () => {
-		expect(APP_LOCALES).toEqual(["en", "zh-CN", "ja", "ko", "es", "fr", "de", "pt-BR", "ru"]);
+		expect(APP_LOCALES).toEqual(["en", "zh-CN", "zh-TW", "ja", "ko", "es", "fr", "de", "pt-BR", "ru"]);
 		expect(coerceLocale("en")).toBe("en");
 		expect(coerceLocale("zh-CN")).toBe("zh-CN");
+		expect(coerceLocale("zh-TW")).toBe("zh-TW");
 		expect(coerceLocale("ja")).toBe("ja");
 		expect(coerceLocale("ko")).toBe("ko");
 		expect(coerceLocale("es")).toBe("es");

@@ -44,6 +44,19 @@ export const trayCatalogs: Record<AppLocale, Record<TrayMessageKey, string> & Pa
 		"zone.merge": "可合并",
 		"zone.action": "需要你处理"
 	},
+	"zh-TW": {
+		"tray.awakeActive": "保持喚醒：正在使此 Mac 保持喚醒",
+		"tray.awakeUnknown": "保持喚醒：狀態不可用",
+		"tray.untitledSession": "未命名工作階段",
+		"tray.attentionTooltip_one": "{{count}} 個工作階段需要關注",
+		"tray.attentionTooltip_other": "{{count}} 個工作階段需要關注",
+		"tray.empty": "沒有工作階段需要關注",
+		"tray.more": "更多",
+		"tray.show": "顯示 Orchestrator",
+		"tray.quit": "完全結束 Orchestrator",
+		"zone.merge": "可合併",
+		"zone.action": "需要你處理"
+	},
 	"ja": {
 		"tray.awakeActive": "スリープ防止：この Mac を起動状態に維持しています",
 		"tray.awakeUnknown": "スリープ防止：状態を取得できません",
