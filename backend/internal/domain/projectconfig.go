@@ -89,6 +89,8 @@ type ProjectConfig struct {
 	// the feature but check with the user or orchestrator before using it.
 	// Read at spawn, when the worker prompt is built.
 	WorkersRequestReview bool `json:"workersRequestReview,omitempty"`
+	// ModelRouting is an explicit opt-in for quota-aware worker selection and recovery.
+	ModelRouting *ModelRoutingConfig `json:"modelRouting,omitempty"`
 }
 
 // ContainerReapConfig is the project-level opt-out for #2652's Docker
@@ -217,6 +219,11 @@ func (c ProjectConfig) IsZero() bool {
 // Validate rejects values outside the typed vocabulary so a bad config is
 // refused when it is set (CLI/API) rather than surfacing at spawn.
 func (c ProjectConfig) Validate() error {
+	if c.ModelRouting != nil {
+		if err := c.ModelRouting.Validate(); err != nil {
+			return err
+		}
+	}
 	if c.CanonicalRepoURL != "" {
 		if err := c.ValidateCanonicalRepository(c.CanonicalRepoURL); err != nil {
 			return err

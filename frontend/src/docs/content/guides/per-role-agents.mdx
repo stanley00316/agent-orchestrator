@@ -88,6 +88,40 @@ A local session can move to a different agent without losing its conversation. T
 
 Only agents that are installed and ready on that computer are offered, and Chat offers only agents with Chat support. Switch while the agent is idle; Orchestrator refuses a switch while the agent is working or waiting on an approval or question. Cloud sessions cannot switch agents.
 
+## Quota-aware task routing
+
+Local projects can opt into `modelRouting` in their saved project configuration.
+An orchestrator classifies the request by difficulty, then uses
+`ao spawn --project my-project --routing-level 1 --name "Fix the wording" --prompt "Correct the spelling in README.md without changing its meaning."`.
+Use level 2 for complex work and level 3 for an explicit escalation. Routing
+selects a Chat-capable agent, model and effort from the project's allowlist.
+It checks the installed model catalog and the target account's fresh native
+usage limits before creating the session. Unknown capacity refuses the spawn.
+Do not combine routing with a model, effort or account override or Terminal UI.
+
+`modelRouting` has `enabled`, `workers`, optional `orchestrators`,
+`reservePercent` (0–50), and `maxSwitches` (1–3, default 2).
+Each allowlist entry has `agent` (`claude-code` or `codex`), `model`, optional
+`effort`, and `level` (1–3). Entries are checked in configured order and must
+name models and efforts the installed catalog actually offers. Use model and
+effort values available on your computer; catalog presence alone does not prove
+that a provider will accept the next request.
+
+When a Chat turn fails with a recognized quota refusal, the background service
+first attempts the existing account handoff when that setting is enabled. If
+no account is available, an opted-in project can switch to an allowed model
+at the current level or above. Shared account limits and model-specific limits
+both apply. Switching preserves the worktree and canonical conversation; a
+different agent receives a handoff note. The original request is retried through
+the existing durable, idempotent retry path.
+
+The retry lineage bounds automatic switches even across restarts. A newer user
+turn, pending approval, unknown quota, unavailable model, or exhausted allowlist
+stops recovery and records the reason in the conversation. Routing never buys
+reset credits or enables paid extra usage. Without `modelRouting`, existing
+projects keep their prior behavior. This policy does not route reviewer runs
+or Terminal UI sessions.
+
 ## Project rules
 
 Use `agentRules` and `agentRulesFile` for worker instructions. Use `orchestratorRules` and `orchestratorRulesFile` for supervision-specific guidance. These are stored in the typed project config and injected into the appropriate session role.

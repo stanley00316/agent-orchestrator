@@ -212,6 +212,7 @@ type terminalTitleSource interface {
 // session operations to the internal sessionmanager.Manager and owns read-model
 // assembly, including user-facing display status derivation.
 type Service struct {
+	modelRouter func(context.Context, ports.SpawnConfig) (ports.SpawnConfig, error)
 	// prMoved tells a live session that another session took its PR.
 	prMoved             PRMovedNotifier
 	manager             commander
@@ -395,6 +396,11 @@ func (s *Service) SetUsageArchiveFlush(flush func(context.Context)) {
 	s.usageArchiveFlush = flush
 }
 
+// SetModelRouter supplies the daemon-owned model and quota selection for spawns.
+func (s *Service) SetModelRouter(router func(context.Context, ports.SpawnConfig) (ports.SpawnConfig, error)) {
+	s.modelRouter = router
+}
+
 // Spawn creates a session and returns the API-facing read model plus
 // ephemeral prompt size measurements.
 func (s *Service) Spawn(ctx context.Context, cfg ports.SpawnConfig) (domain.Session, int, int, error) {
@@ -433,6 +439,16 @@ func (s *Service) Spawn(ctx context.Context, cfg ports.SpawnConfig) (domain.Sess
 				)
 			}
 			return newestSession(existing), 0, 0, nil
+		}
+	}
+	if cfg.RoutingLevel != 0 {
+		if s.modelRouter == nil {
+			return domain.Session{}, 0, 0, apierr.Conflict("MODEL_ROUTING_UNAVAILABLE", "自動選模尚未就緒。", nil)
+		}
+		var err error
+		cfg, err = s.modelRouter(ctx, cfg)
+		if err != nil {
+			return domain.Session{}, 0, 0, err
 		}
 	}
 	return s.spawnUnlessAutoPaused(ctx, cfg, func(spawnCtx context.Context) (domain.Session, int, int, error) { return s.spawn(spawnCtx, cfg) })

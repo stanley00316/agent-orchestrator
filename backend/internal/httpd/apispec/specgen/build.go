@@ -341,6 +341,8 @@ var schemaNames = map[string]string{ //nolint:gosec // Public OpenAPI type names
 	"DomainSessionStaleBinary":        "SessionStaleBinary",
 	"DomainSessionWait":               "SessionWait",
 	"DomainProjectConfig":             "ProjectConfig",
+	"DomainModelRoutingConfig":        "ModelRoutingConfig",
+	"DomainModelRoute":                "ModelRoute",
 	"DomainTrackerIntakeConfig":       "TrackerIntakeConfig",
 	"ControllersTriggerReviewRequest": "TriggerReviewRequest",
 	"DomainContainerReapConfig":       "ContainerReapConfig",

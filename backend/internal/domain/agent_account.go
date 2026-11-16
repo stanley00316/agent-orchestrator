@@ -1,6 +1,7 @@
 package domain
 
 import (
+	"math"
 	"strings"
 	"time"
 )
@@ -137,6 +138,9 @@ func (l AgentAccountLimits) HandoffHeadroom(p AgentAccountProvider, model string
 			continue
 		}
 		relevant = true
+		if math.IsNaN(w.UsedPercent) || math.IsInf(w.UsedPercent, 0) || w.UsedPercent < 0 || w.UsedPercent > 100 {
+			return 0, false
+		}
 		fullest = max(fullest, w.UsedPercent)
 	}
 	if !relevant || fullest >= 100 {

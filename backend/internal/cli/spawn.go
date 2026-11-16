@@ -21,6 +21,7 @@ import (
 const maxDisplayNameLen = 100
 
 type spawnOptions struct {
+	routingLevel    int
 	project         string
 	standalone      bool
 	harness         string
@@ -45,6 +46,7 @@ type spawnOptions struct {
 // spawnRequest mirrors the daemon's SpawnSessionRequest body for
 // POST /api/v1/sessions. The CLI keeps its own copy so it need not import httpd.
 type spawnRequest struct {
+	RoutingLevel        int    `json:"routingLevel,omitempty"`
 	ProjectID           string `json:"projectId,omitempty"`
 	IssueID             string `json:"issueId,omitempty"`
 	ParentSessionID     string `json:"parentSessionId,omitempty"`
@@ -155,11 +157,13 @@ func newSpawnCommand(ctx *commandContext) *cobra.Command {
 				opts.project = project.ID
 			}
 
-			harness, err := resolveSpawnHarness(opts.harness, opts.kind, project)
-			if err != nil {
-				return err
+			if opts.routingLevel == 0 {
+				harness, err := resolveSpawnHarness(opts.harness, opts.kind, project)
+				if err != nil {
+					return err
+				}
+				opts.harness = harness
 			}
-			opts.harness = harness
 
 			if isScratchProject(project) {
 				if strings.TrimSpace(opts.branch) != "" {
@@ -173,7 +177,10 @@ func newSpawnCommand(ctx *commandContext) *cobra.Command {
 				}
 			}
 
-			if !opts.skipAgentCheck {
+			if opts.routingLevel != 0 && (opts.routingLevel < 1 || opts.routingLevel > 3 || opts.standalone || opts.model != "" || opts.effort != "" || opts.account != "" || opts.mode == "tui") {
+				return usageError{fmt.Errorf("--routing-level requires a project, Chat mode, level 1..3, and no --model, --effort or --account")}
+			}
+			if !opts.skipAgentCheck && opts.routingLevel == 0 {
 				if err := ctx.preflightSpawnAgentAuth(cmd.Context(), cmd, opts.harness); err != nil {
 					return err
 				}
@@ -186,6 +193,7 @@ func newSpawnCommand(ctx *commandContext) *cobra.Command {
 				}
 			}
 			req := spawnRequest{
+				RoutingLevel:        opts.routingLevel,
 				ProjectID:           opts.project,
 				IssueID:             opts.issue,
 				ParentSessionID:     strings.TrimSpace(os.Getenv("AO_SESSION_ID")),
@@ -280,6 +288,7 @@ func newSpawnCommand(ctx *commandContext) *cobra.Command {
 	f.StringVar(&opts.baseBranch, "base", "", "Start the session's branch from this branch, to stack on its pull request (default: the project's default branch); with --branch, that branch must be new")
 	f.StringVar(&opts.prompt, "prompt", "", "Initial prompt for the agent")
 	f.StringVar(&opts.model, "model", "", "Agent model override for this session only (e.g. sonnet, gpt-5.6-sol); overrides project/role config without changing it")
+	f.IntVar(&opts.routingLevel, "routing-level", 0, "Select an allowed model with verified quota for task level 1, 2 or 3")
 	f.StringVar(&opts.output, "output", "", "Deliverable for the session: artifact asks the agent to write a file in its artifact directory instead of opening a PR (default: ordinary task)")
 	f.StringVar(&opts.account, "account", "", "Claude Code or Codex account id to start on, from ao account ls; empty uses the agent's default account")
 	f.StringVar(&opts.effort, "effort", "", "Reasoning effort override for this session only (e.g. low, medium, high); empty defers to the agent/model default")

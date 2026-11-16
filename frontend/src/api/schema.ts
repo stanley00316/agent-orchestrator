@@ -7572,6 +7572,20 @@ export interface components {
             running: boolean;
             supported: boolean;
         };
+        ModelRoute: {
+            agent: string;
+            effort?: string;
+            level: number;
+            model: string;
+        };
+        ModelRoutingConfig: {
+            enabled: boolean;
+            maxSwitches?: number;
+            orchestrators?: components["schemas"]["ModelRoute"][];
+            /** Format: double */
+            reservePercent?: number;
+            workers: components["schemas"]["ModelRoute"][];
+        };
         NotificationEnvelope: {
             notification: components["schemas"]["NotificationResponse"];
         };
@@ -7747,6 +7761,7 @@ export interface components {
             env?: {
                 [key: string]: string;
             };
+            modelRouting?: components["schemas"]["ModelRoutingConfig"];
             orchestrator?: components["schemas"]["RoleOverride"];
             orchestratorRules?: string;
             orchestratorRulesFile?: string;
@@ -8938,6 +8953,7 @@ export interface components {
             prompt?: string;
             /** @enum {string} */
             requestedOutput?: "artifact";
+            routingLevel?: number;
             /** @enum {string} */
             trackerProvider?: "github" | "gitlab";
         };

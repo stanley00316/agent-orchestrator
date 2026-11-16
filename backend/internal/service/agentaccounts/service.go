@@ -1194,6 +1194,42 @@ func (s *Service) SessionLimits(ctx context.Context, id domain.SessionID, harnes
 	return account.ID, *r.limits, nil
 }
 
+// RoutingLimits 只檢查下一個代理實際會用的帳號，讀不到額度就拒絕自動接手。
+func (s *Service) RoutingLimits(ctx context.Context, id domain.SessionID, harness domain.AgentHarness) (domain.AgentAccountLimits, error) {
+	p, ok := domain.AgentAccountProviderFor(harness)
+	if !ok || s.providers[p] == nil {
+		return domain.AgentAccountLimits{}, ports.ErrAgentAccountProviderMismatch
+	}
+	_, bound, err := s.store.GetSessionAgentAccount(ctx, id, p)
+	if err != nil {
+		return domain.AgentAccountLimits{}, err
+	}
+	if bound {
+		_, limits, err := s.SessionLimits(ctx, id, harness, true)
+		return limits, err
+	}
+	// A new provider starts on its launch default, not an arbitrarily chosen login.
+	account, err := s.newSessionAccount(ctx, p)
+	if err != nil {
+		return domain.AgentAccountLimits{}, err
+	}
+	r := s.read(ctx, account)
+	if err := ctx.Err(); err != nil {
+		return domain.AgentAccountLimits{}, err
+	}
+	after, err := s.newSessionAccount(ctx, p)
+	if err != nil || after.ID != account.ID {
+		return domain.AgentAccountLimits{}, ports.ErrAgentAccountChanged
+	}
+	if r == nil || r.identityErr != "" || r.limitsErr != "" || r.mismatch || r.limits == nil {
+		return domain.AgentAccountLimits{}, errors.New("account identity or limits are unavailable")
+	}
+	if !r.identity.SignedIn {
+		return domain.AgentAccountLimits{}, ports.ErrAgentAccountSignedOut
+	}
+	return *r.limits, nil
+}
+
 // HandoffTarget picks the account with the most verified room for a usage-limited session, or "" when none has room.
 func (s *Service) HandoffTarget(ctx context.Context, id domain.SessionID, harness domain.AgentHarness, model string) (string, error) {
 	p, ok := domain.AgentAccountProviderFor(harness)

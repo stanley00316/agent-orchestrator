@@ -21880,6 +21880,48 @@ components:
       - location
       - lastError
       type: object
+    ModelRoute:
+      properties:
+        agent:
+          type: string
+        effort:
+          type: string
+        level:
+          maximum: 3
+          minimum: 1
+          type: integer
+        model:
+          type: string
+      required:
+      - agent
+      - model
+      - level
+      type: object
+    ModelRoutingConfig:
+      properties:
+        enabled:
+          type: boolean
+        maxSwitches:
+          maximum: 3
+          minimum: 1
+          type: integer
+        orchestrators:
+          items:
+            $ref: '#/components/schemas/ModelRoute'
+          type: array
+        reservePercent:
+          format: double
+          maximum: 50
+          minimum: 0
+          type: number
+        workers:
+          items:
+            $ref: '#/components/schemas/ModelRoute'
+          type: array
+      required:
+      - enabled
+      - workers
+      type: object
     NotificationEnvelope:
       properties:
         notification:
@@ -22325,6 +22367,8 @@ components:
           additionalProperties:
             type: string
           type: object
+        modelRouting:
+          $ref: '#/components/schemas/ModelRoutingConfig'
         orchestrator:
           $ref: '#/components/schemas/RoleOverride'
         orchestratorRules:
@@ -25349,6 +25393,10 @@ components:
           enum:
           - artifact
           type: string
+        routingLevel:
+          maximum: 3
+          minimum: 1
+          type: integer
         trackerProvider:
           enum:
           - github

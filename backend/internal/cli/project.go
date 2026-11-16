@@ -111,6 +111,7 @@ type containerReapConfig struct {
 // --config-json. Every domain key must be modeled here, or set-config drops it
 // (TestProjectConfigMirrorsDomainJSONKeys guards this).
 type projectConfig struct {
+	ModelRouting          *modelRoutingConfig  `json:"modelRouting,omitempty"`
 	ContainerReap         *containerReapConfig `json:"containerReap,omitempty"`
 	CanonicalRepoURL      string               `json:"canonicalRepoURL,omitempty"`
 	DefaultBranch         string               `json:"defaultBranch,omitempty"`
@@ -132,6 +133,21 @@ type projectConfig struct {
 	// of another field never silently turns it off.
 	WorkersRequestReview bool             `json:"workersRequestReview,omitempty"`
 	Reviewers            []reviewerConfig `json:"reviewers,omitempty"`
+}
+
+type modelRoutingConfig struct {
+	Enabled        bool         `json:"enabled"`
+	Workers        []modelRoute `json:"workers"`
+	Orchestrators  []modelRoute `json:"orchestrators,omitempty"`
+	MaxSwitches    int          `json:"maxSwitches,omitempty"`
+	ReservePercent float64      `json:"reservePercent,omitempty"`
+}
+
+type modelRoute struct {
+	Agent  string `json:"agent"`
+	Model  string `json:"model"`
+	Effort string `json:"effort,omitempty"`
+	Level  int    `json:"level"`
 }
 
 // setConfigRequest mirrors the daemon's SetConfigInput body for

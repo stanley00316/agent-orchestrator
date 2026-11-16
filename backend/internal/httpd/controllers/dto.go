@@ -674,6 +674,7 @@ type SessionArchiveSummary struct {
 
 // SpawnSessionRequest is the body of POST /api/v1/sessions.
 type SpawnSessionRequest struct {
+	RoutingLevel    int    `json:"routingLevel,omitempty" minimum:"1" maximum:"3"`
 	ClientRequestID string `json:"clientRequestId,omitempty" maxLength:"128"`
 	// ProjectID is omitted for a standalone worker session.
 	ProjectID domain.ProjectID `json:"projectId,omitempty"`

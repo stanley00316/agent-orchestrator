@@ -86,7 +86,7 @@ func (s *Service) HandoffUsageLimitedTurns(ctx context.Context) error {
 
 	var claimed []*accountHandoff
 	var err error
-	if deps.enabled(ctx) {
+	if deps.enabled(ctx) || s.modelRouting != nil {
 		claimed, err = s.claimAccountHandoffs(ctx, store, deps)
 	}
 	s.handoffMu.Lock()
@@ -152,6 +152,9 @@ func (s *Service) claimAccountHandoffs(ctx context.Context, store accountHandoff
 	s.handoffMu.Lock()
 	since := s.handoffSince
 	s.handoffMu.Unlock()
+	if s.modelRouting != nil {
+		since = s.now().Add(-accountHandoffWindow)
+	}
 	if recent := s.now().Add(-accountHandoffWindow); recent.After(since) {
 		since = recent
 	}
@@ -176,6 +179,11 @@ func (s *Service) claimAccountHandoffs(ctx context.Context, store accountHandoff
 		}
 		if _, accounts := domain.AgentAccountProviderFor(record.Harness); !found || !accounts {
 			continue
+		}
+		if s.routingPolicy(ctx, record) == nil {
+			if !deps.enabled(ctx) || turn.CompletedAt != nil && turn.CompletedAt.Before(s.handoffSince) {
+				continue
+			}
 		}
 		if account, err := deps.accounts.SessionAccountID(ctx, record.ID, record.Harness); err != nil || account == "" {
 			s.log.Debug("account handoff: session account unavailable", "session", record.ID, "error", err)
@@ -217,14 +225,27 @@ func (s *Service) selectAccountHandoff(ctx context.Context, store accountHandoff
 		}
 		return s.giveUpAfter(h, err)
 	}
-	if source.RetryOfTurnID != "" && s.accountHandoffRetried(source.RetryOfTurnID) {
+	policy := s.routingPolicy(ctx, record)
+	if policy != nil {
+		room, budgetErr := s.routingBudget(ctx, source, policy.SwitchLimit())
+		if budgetErr != nil {
+			return s.giveUpAfter(h, budgetErr)
+		}
+		if !room {
+			return s.stopModelRouting(ctx, h, source, "已達自動切換次數上限，請確認額度後再繼續。")
+		}
+	}
+	if source.RetryOfTurnID != "" && s.accountHandoffRetried(source.RetryOfTurnID) && policy == nil {
 		return s.stayOnAccount(ctx, h, source, "The retry on the new account was refused for a usage limit too.")
 	}
 	model := ""
 	if conversation, err := s.store.ConversationForSession(ctx, h.sessionID); err == nil {
 		model = conversation.Settings.Model
 	}
-	target, err := deps.accounts.HandoffTarget(ctx, h.sessionID, record.Harness, model)
+	target := ""
+	if deps.enabled(ctx) {
+		target, err = deps.accounts.HandoffTarget(ctx, h.sessionID, record.Harness, model)
+	}
 	if errors.Is(err, ports.ErrAgentAccountChanged) {
 		return true, nil
 	}
@@ -232,6 +253,9 @@ func (s *Service) selectAccountHandoff(ctx context.Context, store accountHandoff
 		return s.giveUpAfter(h, err)
 	}
 	if target == "" {
+		if policy != nil {
+			return s.routeUsageLimitedTurn(ctx, h, source, record, policy)
+		}
 		return s.stayOnAccount(ctx, h, source, "No other signed-in account has room for this request.")
 	}
 	if !deps.enabled(ctx) {
